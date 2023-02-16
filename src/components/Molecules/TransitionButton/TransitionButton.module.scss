@@ -1,0 +1,49 @@
+.container {
+    display: flex;
+    position: relative;
+    width: 288px;
+    height: 288px;
+    border: 24px solid var(--primary300);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    img {
+        object-fit: cover;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background-color: #000000;
+        opacity: 70%;
+    }
+
+    p {
+        position: relative;
+        z-index: 1;
+        font-family: var(--font-inter);
+        color: var(--primary300);
+        font-size: 25px;
+        line-height: 30px;
+        text-align: center;
+    }
+
+    .wrapp {
+        background-color: var(--primary400);
+        padding: 0px 10px;
+        z-index: 1;
+        margin-top: 11px;
+
+        p {
+            color: var(--light);
+            font-family: var(--font-note);
+            font-size: 14px;
+            line-height: 24px;
+        }
+    }
+}
