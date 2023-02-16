@@ -1,0 +1,13 @@
+.wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .container {
+        width: 960px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+}

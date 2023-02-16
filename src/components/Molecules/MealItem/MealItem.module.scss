@@ -1,0 +1,21 @@
+.item {
+    position: relative;
+
+    div {
+        background-color: var(--primary300);
+        height: 32px;
+        padding: 8px 7px;
+        color: var(--light);
+        position: absolute;
+        bottom: 3px;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        span {
+            font-family: var(--font-base);
+            font-size: 15px;
+        }
+    }
+}
