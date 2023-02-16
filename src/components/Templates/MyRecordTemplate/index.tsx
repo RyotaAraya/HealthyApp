@@ -1,12 +1,12 @@
 import TransitionMenu from "@/components/Organisms/TransitionMenu"
-import Filter from "@/components/Organisms/Filter"
+import BodyRecord from "@/components/Organisms/BodyRecord"
 import MealRecord from "@/components/Organisms/MealRecord"
 
 const MyPageTemplate = () => {
     return (
         <>
             <TransitionMenu />
-            <Filter />
+            <BodyRecord />
             <MealRecord />
         </>
     )
