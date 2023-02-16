@@ -1,0 +1,16 @@
+.nav {
+    display: flex;
+    align-items: center;
+    p {
+        color: var(--light);
+        font-weight: 300;
+        padding-left: 8px;
+    }
+}
+
+.navItem {
+    width: 160px;
+    margin-right: 8px;
+    display: flex;
+    align-items: center;
+}
