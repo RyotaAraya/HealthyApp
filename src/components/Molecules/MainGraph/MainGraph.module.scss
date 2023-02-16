@@ -1,0 +1,11 @@
+.container {
+    display: flex;
+    background-color: var(--dark600);
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+
+    img {
+        object-fit: contain;
+    }
+}

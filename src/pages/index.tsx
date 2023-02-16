@@ -1,6 +1,7 @@
 import Head from "next/head"
 import Image from "next/image"
 import { Inter } from "@next/font/google"
+import MyPageTemplate from "@/components/Templates/MyPageTemplate"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -18,7 +19,9 @@ export default function Home() {
                     content="width=device-width, initial-scale=1"
                 />
             </Head>
-            <main>main</main>
+            <main>
+                <MyPageTemplate />
+            </main>
         </>
     )
 }
