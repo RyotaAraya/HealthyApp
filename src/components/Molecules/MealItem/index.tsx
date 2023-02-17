@@ -1,17 +1,23 @@
 import Image from "next/image"
 import styles from "@/components/Molecules/MealItem/MealItem.module.scss"
+import { FC } from "react"
 
-export const MealItem = () => {
+interface Props {
+    imageUrl: string
+    date: string
+}
+
+export const MealItem: FC<Props> = ({ imageUrl, date }) => {
     return (
         <button className={styles.container}>
             <Image
-                src="/images/meal_01.png"
+                src={imageUrl}
                 width={234}
                 height={234}
                 alt="Meal"
             />
             <div>
-                <span>05.21.Morning</span>
+                <span>{date}</span>
             </div>
         </button>
     )
