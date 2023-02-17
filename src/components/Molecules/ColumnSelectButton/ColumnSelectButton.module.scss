@@ -1,0 +1,29 @@
+.container {
+    height: 144px;
+    width: 216px;
+    padding: 24px 8px 22px 8px;
+    background-color: var(--dark600);
+
+    h3 {
+        font-size: 22px;
+        font-weight: 300;
+        text-align: center;
+        color: var(--primary300);
+        margin-bottom: 8px;
+
+        &::after {
+            content: " ";
+            display: block;
+            margin: 10px auto 0px;
+            width: 56px;
+            height: 1px;
+            background-color: var(--light);
+        }
+    }
+
+    p {
+        color: var(--light);
+        font-size: 18px;
+        font-weight: 200;
+    }
+}
