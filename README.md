@@ -19,6 +19,7 @@ NextJS、Typescript、SCSS、module CSS、Atomic Design
 - 状態管理
 - ハンバーガーメニュー
 - Header と Footer の遷移先
+- レスポンシブ対応
 
 ## インストールおよび実行方法
 
