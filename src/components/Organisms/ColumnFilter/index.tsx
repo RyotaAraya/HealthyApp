@@ -1,24 +1,24 @@
-import ColumnSelectButton from "@/components/Molecules/ColumnSelectButton"
-import styles from "@/components/Organisms/ColumnSelector/ColumnSelector.module.scss"
+import ColumnFilterButton from "@/components/Molecules/ColumnFilterButton"
+import styles from "@/components/Organisms/ColumnFilter/ColumnFilter.module.scss"
 
-const ColumnSelector = () => {
+const ColumnFilter = () => {
     //TODO:定数から取得してmapで表示
     return (
         <div className={styles.wrapper}>
             <div className={styles.container}>
-                <ColumnSelectButton
+                <ColumnFilterButton
                     recommend_title="RECOMMENDED COLUMN"
                     name="オススメ"
                 />
-                <ColumnSelectButton
+                <ColumnFilterButton
                     recommend_title="RECOMMENDED DIET"
                     name="ダイエット"
                 />
-                <ColumnSelectButton
+                <ColumnFilterButton
                     recommend_title="RECOMMENDED BEAUTY"
                     name="美容"
                 />
-                <ColumnSelectButton
+                <ColumnFilterButton
                     recommend_title="RECOMMENDED HEALTH"
                     name="健康"
                 />
@@ -27,4 +27,4 @@ const ColumnSelector = () => {
     )
 }
 
-export default ColumnSelector
+export default ColumnFilter
