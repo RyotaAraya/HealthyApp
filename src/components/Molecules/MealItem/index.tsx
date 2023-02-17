@@ -3,7 +3,7 @@ import styles from "@/components/Molecules/MealItem/MealItem.module.scss"
 
 export const MealItem = () => {
     return (
-        <button className={styles.item}>
+        <button className={styles.container}>
             <Image
                 src="/images/meal_01.png"
                 width={234}

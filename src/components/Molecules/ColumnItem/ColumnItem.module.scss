@@ -1,0 +1,38 @@
+.container {
+    position: relative;
+    width: 234px;
+    height: 222px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 18px;
+
+    .date {
+        background-color: var(--primary300);
+        height: 24px;
+        padding: 3px 8px;
+        color: var(--light);
+        position: absolute;
+        bottom: 78px;
+        left: 0;
+
+        span {
+            font-family: var(--font-inter);
+            font-size: 15px;
+        }
+    }
+    h3 {
+        margin-top: 8px;
+        font-family: var(--font-noto);
+        font-size: 15px;
+        font-weight: 300;
+        text-align: left;
+    }
+    p {
+        color: var(--primary400);
+        margin-top: 8px;
+        font-family: var(--font-noto);
+        font-size: 15px;
+        font-weight: 300;
+        text-align: left;
+    }
+}
