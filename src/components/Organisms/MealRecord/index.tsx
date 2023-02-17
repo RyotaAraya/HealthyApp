@@ -1,7 +1,7 @@
 import Button from "@/components/Atoms/Button"
 import MealItem from "@/components/Molecules/MealItem"
 import styles from "@/components/Organisms/MealRecord/MealRecord.module.scss"
-import { INIT_MEAL_LIST } from "@/constants/data"
+import { INIT_MEAL_LIST } from "@/constants/tmpData"
 
 export const MealRecord = () => {
     //TODO:データ取得して表示するようにする

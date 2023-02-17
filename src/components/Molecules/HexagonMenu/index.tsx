@@ -1,13 +1,10 @@
 import Image from "next/image"
-import { ReactNode } from "react"
 import styles from "@/components/Molecules/HexagonMenu/HexagonMenu.module.scss"
+import IconKnife from "@/components/Atoms/IconKnife"
+import IconCup from "@/components/Atoms/IconCup"
+import { Hexagon } from "@/types"
 
-interface Props {
-    title: string
-    icon: () => ReactNode
-}
-
-export const HexagonMenu: React.FC<Props> = ({ title, icon }) => {
+export const HexagonMenu: React.FC<Hexagon> = ({ title, icon }) => {
     return (
         <button className={styles.container}>
             <Image
@@ -17,7 +14,7 @@ export const HexagonMenu: React.FC<Props> = ({ title, icon }) => {
                 width={136}
             />
             <div className={styles.content}>
-                {icon()}
+                {icon === "IconKnife" ? <IconKnife /> : <IconCup />}
                 <span className={styles.title}>{title}</span>
             </div>
         </button>

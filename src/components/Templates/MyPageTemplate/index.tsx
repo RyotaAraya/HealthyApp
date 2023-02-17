@@ -1,11 +1,11 @@
 import Progress from "@/components/Organisms/Progress"
-import MealSelector from "@/components/Organisms/MealSelector"
+import MealFilter from "@/components/Organisms/MealFilter"
 import MealRecord from "@/components/Organisms/MealRecord"
 const MyPageTemplate = () => {
     return (
         <>
             <Progress />
-            <MealSelector />
+            <MealFilter />
             <MealRecord />
         </>
     )
