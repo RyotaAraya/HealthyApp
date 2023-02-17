@@ -1,7 +1,7 @@
 import TransitionMenu from "@/components/Organisms/TransitionMenu"
 import BodyRecord from "@/components/Organisms/BodyRecord"
 import MyExercise from "@/components/Organisms/MyExercise"
-import MealRecord from "@/components/Organisms/MealRecord"
+import MyDiary from "@/components/Organisms/MyDiary"
 
 const MyPageTemplate = () => {
     return (
@@ -9,7 +9,7 @@ const MyPageTemplate = () => {
             <TransitionMenu />
             <BodyRecord />
             <MyExercise />
-            <MealRecord />
+            <MyDiary />
         </>
     )
 }
