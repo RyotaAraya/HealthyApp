@@ -1,20 +1,18 @@
 import Button from "@/components/Atoms/Button"
 import MealItem from "@/components/Molecules/MealItem"
 import styles from "@/components/Organisms/MealRecord/MealRecord.module.scss"
+import { INIT_MEAL_LIST } from "@/constants/data"
 
 export const MealRecord = () => {
-    //ベタ書きのためデータ取得して表示するようにする
+    //TODO:データ取得して表示するようにする
+    const MEAL_LIST = INIT_MEAL_LIST
+
     return (
         <div className={styles.wrap}>
             <div className={styles.container}>
-                <MealItem imageUrl="/images/meal_01.png" date="05.21.Morning" />
-                <MealItem imageUrl="/images/meal_01.png" date="05.21.Morning" />
-                <MealItem imageUrl="/images/meal_01.png" date="05.21.Morning" />
-                <MealItem imageUrl="/images/meal_01.png" date="05.21.Morning" />
-                <MealItem imageUrl="/images/meal_01.png" date="05.21.Morning" />
-                <MealItem imageUrl="/images/meal_01.png" date="05.21.Morning" />
-                <MealItem imageUrl="/images/meal_01.png" date="05.21.Morning" />
-                <MealItem imageUrl="/images/meal_01.png" date="05.21.Morning" />
+                {MEAL_LIST.map((item) => (
+                    <MealItem key={item.id} url={item.url} date={item.date} />
+                ))}
             </div>
             <div>
                 <Button title="記録をもっと見る" />

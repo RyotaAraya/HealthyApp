@@ -3,15 +3,15 @@ import styles from "@/components/Molecules/MealItem/MealItem.module.scss"
 import { FC } from "react"
 
 interface Props {
-    imageUrl: string
+    url: string
     date: string
 }
 
-export const MealItem: FC<Props> = ({ imageUrl, date }) => {
+export const MealItem: FC<Props> = ({ url, date }) => {
     return (
         <button className={styles.container}>
             <Image
-                src={imageUrl}
+                src={url}
                 width={234}
                 height={234}
                 alt="Meal"
