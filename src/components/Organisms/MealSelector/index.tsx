@@ -1,9 +1,9 @@
 import HexagonMenu from "@/components/Molecules/HexagonMenu"
 import IconKnife from "@/components/Atoms/IconKnife"
 import IconCup from "@/components/Atoms/IconCup"
-import styles from "@/components/Organisms/Filter/Filter.module.scss"
+import styles from "@/components/Organisms/MealSelector/MealSelector.module.scss"
 
-const Filter = () => {
+const MealSelector = () => {
     return (
         <div className={styles.container}>
             <HexagonMenu title="Morning" icon={IconKnife} />
@@ -14,4 +14,4 @@ const Filter = () => {
     )
 }
 
-export default Filter
+export default MealSelector
