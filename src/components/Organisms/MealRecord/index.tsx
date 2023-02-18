@@ -5,13 +5,17 @@ import { INIT_MEAL_LIST } from "@/constants/tmpData"
 
 export const MealRecord = () => {
     //TODO:データ取得して表示するようにする
-    const MEAL_LIST = INIT_MEAL_LIST
 
     return (
         <div className={styles.wrap}>
             <div className={styles.container}>
-                {MEAL_LIST.map((item) => (
-                    <MealItem key={item.id} url={item.url} date={item.date} />
+                {INIT_MEAL_LIST.map((item) => (
+                    <MealItem
+                        key={item.id}
+                        url={item.url}
+                        category={item.category}
+                        date={item.date}
+                    />
                 ))}
             </div>
             <div>
