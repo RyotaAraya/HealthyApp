@@ -120,3 +120,78 @@ export const INIT_DIARY_LIST: Diary[] = [
         created_at: new Date("2022-05-21 23:25"),
     },
 ]
+
+export const INIT_COLUMN_LIST: Column[] = [
+    {
+        id: 1,
+        title: "column 1",
+        content:
+            "魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリット",
+        url: "/images/column-1.jpg",
+        tag: [{ name: "魚料理" }, { name: "和食" }, { name: "DHA" }],
+        created_at: new Date("2022-05-21"),
+    },
+    {
+        id: 2,
+        title: "column 2",
+        content:
+            "魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリット",
+        url: "/images/column-2.jpg",
+        tag: [{ name: "魚料理" }, { name: "和食" }, { name: "DHA" }],
+        created_at: new Date("2022-05-21"),
+    },
+    {
+        id: 3,
+        title: "column 3",
+        content:
+            "魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリット",
+        url: "/images/column-3.jpg",
+        tag: [{ name: "魚料理" }, { name: "和食" }, { name: "DHA" }],
+        created_at: new Date("2022-05-21"),
+    },
+    {
+        id: 4,
+        title: "column 4",
+        content:
+            "魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリット",
+        url: "/images/column-4.jpg",
+        tag: [{ name: "魚料理" }, { name: "和食" }, { name: "DHA" }],
+        created_at: new Date("2022-05-21"),
+    },
+    {
+        id: 5,
+        title: "column 5",
+        content:
+            "魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリット",
+        url: "/images/column-5.jpg",
+        tag: [{ name: "魚料理" }, { name: "和食" }, { name: "DHA" }],
+        created_at: new Date("2022-05-21"),
+    },
+    {
+        id: 6,
+        title: "column 6",
+        content:
+            "魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリット",
+        url: "/images/column-6.jpg",
+        tag: [{ name: "魚料理" }, { name: "和食" }, { name: "DHA" }],
+        created_at: new Date("2022-05-21"),
+    },
+    {
+        id: 7,
+        title: "column 7",
+        content:
+            "魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリット",
+        url: "/images/column-7.jpg",
+        tag: [{ name: "魚料理" }, { name: "和食" }, { name: "DHA" }],
+        created_at: new Date("2022-05-21"),
+    },
+    {
+        id: 8,
+        title: "column 8",
+        content:
+            "魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリット",
+        url: "/images/column-8.jpg",
+        tag: [{ name: "魚料理" }, { name: "和食" }, { name: "DHA" }],
+        created_at: new Date("2022-05-21"),
+    },
+]

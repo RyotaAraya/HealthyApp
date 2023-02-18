@@ -15,6 +15,10 @@
         bottom: 78px;
         left: 0;
 
+        :first-child {
+            margin-right: 12px;
+        }
+
         span {
             font-family: var(--font-inter);
             font-size: 15px;
@@ -26,13 +30,25 @@
         font-size: 15px;
         font-weight: 300;
         text-align: left;
+        overflow: hidden;
+        white-space: pre-wrap;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
     }
-    p {
-        color: var(--primary400);
-        margin-top: 8px;
-        font-family: var(--font-noto);
-        font-size: 15px;
-        font-weight: 300;
-        text-align: left;
+    .hashTag {
+        flex-direction: row;
+
+        span {
+            color: var(--primary400);
+            margin-top: 8px;
+            font-family: var(--font-noto);
+            font-size: 15px;
+            font-weight: 300;
+
+            &:not(:last-child) {
+                margin-right: 10px;
+            }
+        }
     }
 }

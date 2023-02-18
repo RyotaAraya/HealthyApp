@@ -1,80 +1,22 @@
 import Button from "@/components/Atoms/Button"
 import ColumnItem from "@/components/Molecules/ColumnItem"
 import styles from "@/components/Organisms/ColumnList/ColumnList.module.scss"
+import { INIT_COLUMN_LIST } from "@/constants/tmpData"
 
 export const ColumnList = () => {
     //TODO:ベタ書きなのでデータ取得した値をmapで表示する
     return (
         <div className={styles.wrap}>
             <div className={styles.container}>
-                <ColumnItem
-                    imageUrl={"/images/column-1.png"}
-                    date={"05.21.Morning"}
-                    title={
-                        "魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ…"
-                    }
-                    tag={"#魚料理 #和食 #DHA"}
-                />
-                <ColumnItem
-                    imageUrl={"/images/column-1.png"}
-                    date={"05.21.Morning"}
-                    title={
-                        "魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ…"
-                    }
-                    tag={"#魚料理 #和食 #DHA"}
-                />
-                <ColumnItem
-                    imageUrl={"/images/column-1.png"}
-                    date={"05.21.Morning"}
-                    title={
-                        "魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ…"
-                    }
-                    tag={"#魚料理 #和食 #DHA"}
-                />
-
-                <ColumnItem
-                    imageUrl={"/images/column-1.png"}
-                    date={"05.21.Morning"}
-                    title={
-                        "魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ…"
-                    }
-                    tag={"#魚料理 #和食 #DHA"}
-                />
-
-                <ColumnItem
-                    imageUrl={"/images/column-1.png"}
-                    date={"05.21.Morning"}
-                    title={
-                        "魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ…"
-                    }
-                    tag={"#魚料理 #和食 #DHA"}
-                />
-
-                <ColumnItem
-                    imageUrl={"/images/column-1.png"}
-                    date={"05.21.Morning"}
-                    title={
-                        "魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ…"
-                    }
-                    tag={"#魚料理 #和食 #DHA"}
-                />
-                <ColumnItem
-                    imageUrl={"/images/column-1.png"}
-                    date={"05.21.Morning"}
-                    title={
-                        "魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ…"
-                    }
-                    tag={"#魚料理 #和食 #DHA"}
-                />
-
-                <ColumnItem
-                    imageUrl={"/images/column-1.png"}
-                    date={"05.21.Morning"}
-                    title={
-                        "魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ…"
-                    }
-                    tag={"#魚料理 #和食 #DHA"}
-                />
+                {INIT_COLUMN_LIST.map((item) => (
+                    <ColumnItem
+                        key={item.id}
+                        content={item.content}
+                        url={item.url}
+                        tag={item.tag}
+                        created_at={item.created_at}
+                    />
+                ))}
             </div>
             <div>
                 <Button title="コラムをもっと見る" />

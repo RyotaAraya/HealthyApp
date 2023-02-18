@@ -10,6 +10,10 @@ export type User = {
 }
 export type Category = "Morning" | "Lunch" | "Dinner" | "Snack"
 
+export type HashTag = {
+    name: string
+}
+
 export type Meal = {
     id: number
     category: Category
@@ -28,7 +32,9 @@ export type Column = {
     id: number
     title: string
     content: string
-    created_at: string
+    url: string
+    tag: HashTag[]
+    created_at: Date
 }
 
 // Menuなどで使用
