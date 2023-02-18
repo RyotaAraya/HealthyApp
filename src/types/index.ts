@@ -8,10 +8,11 @@ export type User = {
     weight: number
     created_at: Date
 }
+export type Category = "Morning" | "Lunch" | "Dinner" | "Snack"
 
 export type Meal = {
     id: number
-    category: "Morning" | "Lunch" | "Dinner" | "Snack"
+    category: Category
     url: string
     date: string
     created_at: Date
@@ -32,7 +33,7 @@ export type Column = {
 
 // Menuなどで使用
 export type Hexagon = {
-    title: string
+    title: Category
     icon: string
 }
 
