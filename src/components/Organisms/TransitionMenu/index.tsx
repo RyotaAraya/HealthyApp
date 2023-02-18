@@ -1,24 +1,18 @@
 import TransitionButton from "@/components/Molecules/TransitionButton"
 import styles from "@/components/Organisms/TransitionMenu/Transition.module.scss"
+import { TRANSITION_MENU_LIST } from "@/constants"
 
 export const TransitionMenu = () => {
     return (
         <div className={styles.container}>
-            <TransitionButton
-                imageUrl="/images/MyRecommend-1.svg"
-                title="BODY RECORD"
-                description="自分のカラダの記録"
-            />
-            <TransitionButton
-                imageUrl="/images/MyRecommend-2.svg"
-                title="MY EXERCISE"
-                description="自分の運動の記録"
-            />
-            <TransitionButton
-                imageUrl="/images/MyRecommend-3.svg"
-                title="MY DIARY"
-                description="自分の日記"
-            />
+            {TRANSITION_MENU_LIST.map((item, index) => (
+                <TransitionButton
+                    key={index}
+                    title={item.title}
+                    url={item.url}
+                    description={item.description}
+                />
+            ))}
         </div>
     )
 }
