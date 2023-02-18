@@ -19,8 +19,14 @@
         margin-bottom: 8px;
     }
 
+    //7行制限
     .description {
         font-size: 12px;
         font-weight: 300;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 7;
+        white-space: pre-wrap;
     }
 }

@@ -21,7 +21,7 @@ export type Meal = {
 export type Diary = {
     id: number
     content: string
-    created_at: string
+    created_at: Date
 }
 
 export type Column = {
