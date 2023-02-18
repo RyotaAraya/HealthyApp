@@ -1,4 +1,4 @@
-import { Hexagon, Transition } from "@/types"
+import { Hexagon, Transition, ColumnFilter } from "@/types"
 
 export const HEXAGON_MENU_LIST: Hexagon[] = [
     { title: "Morning", icon: "IconKnife" },
@@ -22,5 +22,24 @@ export const TRANSITION_MENU_LIST: Transition[] = [
         title: "MY DIARY",
         url: "/images/MyRecommend-3.svg",
         description: "自分の日記",
+    },
+]
+
+export const COLUMN_FILTER_LIST: ColumnFilter[] = [
+    {
+        title: "RECOMMENDED COLUMN",
+        name: "オススメ",
+    },
+    {
+        title: "RECOMMENDED DIET",
+        name: "ダイエット",
+    },
+    {
+        title: "RECOMMENDED BEAUTY",
+        name: "美容",
+    },
+    {
+        title: "RECOMMENDED HEALTH",
+        name: "健康",
     },
 ]

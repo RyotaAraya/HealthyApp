@@ -48,3 +48,8 @@ export type Transition = {
     url: string
     description: string
 }
+
+export type ColumnFilter = {
+    title: string
+    name: string
+}

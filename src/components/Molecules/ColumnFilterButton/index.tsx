@@ -1,12 +1,11 @@
 import styles from "@/components/Molecules/ColumnFilterButton/ColumnFilterButton.module.scss"
 import { FC } from "react"
+import { ColumnFilter } from "@/types"
 
-interface Props {
-    recommend_title: string
-    name: string
-}
-
-export const ColumnFilterButton: FC<Props> = ({ recommend_title, name }) => {
+export const ColumnFilterButton: FC<ColumnFilter> = ({
+    title: recommend_title,
+    name,
+}) => {
     return (
         <button className={styles.container}>
             <h3>{recommend_title}</h3>
