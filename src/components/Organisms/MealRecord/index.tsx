@@ -1,15 +1,20 @@
 import Button from "@/components/Atoms/Button"
 import MealItem from "@/components/Molecules/MealItem"
 import styles from "@/components/Organisms/MealRecord/MealRecord.module.scss"
-import { INIT_MEAL_LIST } from "@/constants/tmpData"
+import { FC } from "react"
+import { Meal } from "@/types"
 
-export const MealRecord = () => {
+type Props = {
+    mealList: Meal[]
+}
+
+export const MealRecord: FC<Props> = ({ mealList }) => {
     //TODO:データ取得して表示するようにする
 
     return (
         <div className={styles.wrap}>
             <div className={styles.container}>
-                {INIT_MEAL_LIST.map((item) => (
+                {mealList.map((item) => (
                     <MealItem
                         key={item.id}
                         url={item.url}
