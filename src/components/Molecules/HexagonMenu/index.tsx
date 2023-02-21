@@ -5,9 +5,16 @@ import IconKnife from "@/components/Atoms/IconKnife"
 import IconCup from "@/components/Atoms/IconCup"
 import type { Hexagon } from "@/types"
 
-export const HexagonMenu: FC<Hexagon> = ({ title, icon }) => {
+type Props = Hexagon & {
+    handleFilter: (title: string) => void
+}
+
+export const HexagonMenu: FC<Props> = ({ title, icon, handleFilter }) => {
     return (
-        <button className={styles.container}>
+        <button
+            className={styles.container}
+            onClick={() => handleFilter(title)}
+        >
             <Image
                 src="/hexagon.svg"
                 alt="hexagonMenu"

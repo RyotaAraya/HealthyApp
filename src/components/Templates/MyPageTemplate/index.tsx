@@ -2,21 +2,23 @@ import { useState } from "react"
 import Progress from "@/components/Organisms/Progress"
 import MealFilter from "@/components/Organisms/MealFilter"
 import MealRecord from "@/components/Organisms/MealRecord"
-import { INIT_MEAL_LIST } from "@/constants/tmpData"
+import { INIT_MEAL_LIST as mealList } from "@/constants/tmpData"
+import { useMyPageTemplate } from "@/components/Templates/MyPageTemplate/useMypageTemplate"
 
 const MyPageTemplate = () => {
     //新しい順に並び替え
     //TODO:データ取得時に新しい順で取得する
-    if (INIT_MEAL_LIST.length)
-        INIT_MEAL_LIST.sort((a, b) => (a.date > b.date ? -1 : 1))
+    if (mealList.length) mealList.sort((a, b) => (a.date > b.date ? -1 : 1))
 
-    const [mealList, setMealList] = useState(INIT_MEAL_LIST)
+    const [{ originMealList }, { handleFilter }] = useMyPageTemplate({
+        mealList,
+    })
 
     return (
         <>
             <Progress />
-            <MealFilter />
-            <MealRecord mealList={mealList} />
+            <MealFilter handleFilter={handleFilter} />
+            <MealRecord mealList={originMealList} />
         </>
     )
 }
