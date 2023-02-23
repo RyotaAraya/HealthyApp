@@ -17,7 +17,6 @@ NextJS、Typescript、SCSS、module CSS、Atomic Design
 - ログイン機能
 - API との連携部分
 - 状態管理
-- ハンバーガーメニュー
 - Header と Footer の遷移先
 - レスポンシブ対応
 
