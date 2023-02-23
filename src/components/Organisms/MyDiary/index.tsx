@@ -1,14 +1,25 @@
 import Button from "@/components/Atoms/Button"
 import MyDiaryItem from "@/components/Molecules/MyDiaryItem"
 import styles from "@/components/Organisms/MyDiary/MyDiary.module.scss"
+import { Diary } from "@/types"
 import { INIT_DIARY_LIST } from "@/constants/tmpData"
 
-export const MyDiary = () => {
+type Props = {
+    originDiaryList: Diary[]
+    displayCount: number
+    handleShowMore: () => void
+}
+
+export const MyDiary = ({
+    originDiaryList,
+    displayCount,
+    handleShowMore,
+}: Props) => {
     return (
         <div className={styles.wrap}>
             <h3 className={styles.title}>MY DIARY</h3>
             <div className={styles.container}>
-                {INIT_DIARY_LIST.map((item) => (
+                {originDiaryList.slice(0, displayCount).map((item) => (
                     <MyDiaryItem
                         key={item.id}
                         content={item.content}
@@ -17,7 +28,10 @@ export const MyDiary = () => {
                 ))}
             </div>
             <div>
-                <Button title="記録をもっと見る" />
+                <Button
+                    title="記録をもっと見る"
+                    handleShowMore={handleShowMore}
+                />
             </div>
         </div>
     )

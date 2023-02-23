@@ -6,15 +6,19 @@ import { Meal } from "@/types"
 
 type Props = {
     mealList: Meal[]
+    displayCount: number
+    handleShowMore: () => void
 }
 
-export const MealRecord: FC<Props> = ({ mealList }) => {
-    //TODO:データ取得して表示するようにする
-
+export const MealRecord: FC<Props> = ({
+    mealList,
+    displayCount,
+    handleShowMore,
+}) => {
     return (
         <div className={styles.wrap}>
             <div className={styles.container}>
-                {mealList.map((item) => (
+                {mealList.slice(0, displayCount).map((item) => (
                     <MealItem
                         key={item.id}
                         url={item.url}
@@ -24,7 +28,10 @@ export const MealRecord: FC<Props> = ({ mealList }) => {
                 ))}
             </div>
             <div>
-                <Button title="記録をもっと見る" />
+                <Button
+                    title="記録をもっと見る"
+                    handleShowMore={handleShowMore}
+                />
             </div>
         </div>
     )
