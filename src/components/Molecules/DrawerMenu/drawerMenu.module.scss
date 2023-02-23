@@ -1,0 +1,25 @@
+.container {
+    transition: all 0.3s ease-in-out;
+    top: 0;
+    right: 0;
+    transform: translate(400px);
+    position: fixed;
+    ul {
+        display: flex;
+        flex-flow: column;
+        button {
+            text-align: right;
+        }
+        li {
+            font-size: 18px;
+            padding: 23px 32px;
+            width: 280px;
+            height: 72px;
+            background-color: var(--gray400);
+            border-top: 1px solid #707070;
+        }
+    }
+}
+.isOpen {
+    transform: translate(0);
+}

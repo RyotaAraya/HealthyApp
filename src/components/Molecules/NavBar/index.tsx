@@ -2,18 +2,11 @@ import Logo from "@/components/Atoms/Logo"
 import IconChallenge from "@/components/Atoms/IconChallenge"
 import IconInfo from "@/components/Atoms/IconInfo"
 import IconMemo from "@/components/Atoms/IconMemo"
-import IconMenu from "@/components/Atoms/IconMenu"
+import DrawerMenu from "@/components/Molecules/DrawerMenu"
 import Link from "next/link"
 import styles from "@/components/Molecules/NavBar/navbar.module.scss"
-import { useState } from "react"
-import { HAMBURGER_MENU } from "@/constants"
 
 export const NavBar = () => {
-    const [openMenu, setOpenMenu] = useState(false)
-    const handleOpenMenu = () => {
-        setOpenMenu(!openMenu)
-    }
-    console.log("open", openMenu)
     return (
         <>
             <Link href="/">
@@ -33,26 +26,7 @@ export const NavBar = () => {
                     <IconInfo />
                     <p>お知らせ</p>
                 </Link>
-                {/* TODO:MENUクリック時に展開 */}
-                <button onClick={handleOpenMenu}>
-                    <IconMenu url={"/icons/icon_menu.svg"} />
-                </button>
-                <div
-                    className={`${styles.hamburgerMenu} ${
-                        openMenu ? styles.isOpen : undefined
-                    }`}
-                >
-                    <ul>
-                        <button onClick={handleOpenMenu}>
-                            <IconMenu url={"/icons/icon_close.svg"} />
-                        </button>
-                        {HAMBURGER_MENU.map((item, index) => (
-                            <Link key={index} href={item.link}>
-                                <li>{item.name}</li>
-                            </Link>
-                        ))}
-                    </ul>
-                </div>
+                <DrawerMenu />
             </div>
         </>
     )

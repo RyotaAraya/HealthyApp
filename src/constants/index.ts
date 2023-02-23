@@ -1,4 +1,4 @@
-import { Hexagon, Transition, ColumnFilter, HumburgerMenu } from "@/types"
+import { Hexagon, Transition, ColumnFilter, DrawerMenu } from "@/types"
 
 export const HEXAGON_MENU_LIST: Hexagon[] = [
     { title: "Morning", icon: "IconKnife" },
@@ -44,7 +44,7 @@ export const COLUMN_FILTER_LIST: ColumnFilter[] = [
     },
 ]
 
-export const HAMBURGER_MENU: HumburgerMenu[] = [
+export const DRAWER_MENU: DrawerMenu[] = [
     {
         name: "自分の記録",
         link: "/my-record",

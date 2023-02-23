@@ -54,7 +54,7 @@ export type ColumnFilter = {
     name: string
 }
 
-export type HumburgerMenu = {
+export type DrawerMenu = {
     name: string
     link: string
 }
