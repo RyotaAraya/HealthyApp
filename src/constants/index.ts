@@ -1,4 +1,4 @@
-import { Hexagon, Transition, ColumnFilter } from "@/types"
+import { Hexagon, Transition, ColumnFilter, HumburgerMenu } from "@/types"
 
 export const HEXAGON_MENU_LIST: Hexagon[] = [
     { title: "Morning", icon: "IconKnife" },
@@ -41,5 +41,32 @@ export const COLUMN_FILTER_LIST: ColumnFilter[] = [
     {
         title: "RECOMMENDED HEALTH",
         name: "健康",
+    },
+]
+
+export const HAMBURGER_MENU: HumburgerMenu[] = [
+    {
+        name: "自分の記録",
+        link: "/my-record",
+    },
+    {
+        name: "体重グラフ",
+        link: "#",
+    },
+    {
+        name: "目標",
+        link: "#",
+    },
+    {
+        name: "選択中のコース",
+        link: "#",
+    },
+    {
+        name: "コラム一覧",
+        link: "/column",
+    },
+    {
+        name: "設定",
+        link: "#",
     },
 ]

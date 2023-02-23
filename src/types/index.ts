@@ -53,3 +53,8 @@ export type ColumnFilter = {
     title: string
     name: string
 }
+
+export type HumburgerMenu = {
+    name: string
+    link: string
+}
