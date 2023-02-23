@@ -175,6 +175,54 @@ export const INIT_DIARY_LIST: Diary[] = [
             "私の日記の記録が一部表示されます。\nテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト…",
         created_at: new Date("2022-05-21 23:25"),
     },
+    {
+        id: 9,
+        content:
+            "私の日記の記録が一部表示されます。\nテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト…",
+        created_at: new Date("2022-05-21 23:25"),
+    },
+    {
+        id: 10,
+        content:
+            "私の日記の記録が一部表示されます。\nテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト…",
+        created_at: new Date("2022-05-21 23:25"),
+    },
+    {
+        id: 11,
+        content:
+            "私の日記の記録が一部表示されます。\nテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト…",
+        created_at: new Date("2022-05-21 23:25"),
+    },
+    {
+        id: 12,
+        content:
+            "私の日記の記録が一部表示されます。\nテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト…",
+        created_at: new Date("2022-05-21 23:25"),
+    },
+    {
+        id: 13,
+        content:
+            "私の日記の記録が一部表示されます。\nテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト…",
+        created_at: new Date("2022-05-21 23:25"),
+    },
+    {
+        id: 14,
+        content:
+            "私の日記の記録が一部表示されます。\nテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト…",
+        created_at: new Date("2022-05-21 23:25"),
+    },
+    {
+        id: 15,
+        content:
+            "私の日記の記録が一部表示されます。\nテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト…",
+        created_at: new Date("2022-05-21 23:25"),
+    },
+    {
+        id: 16,
+        content:
+            "私の日記の記録が一部表示されます。\nテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト…",
+        created_at: new Date("2022-05-21 23:25"),
+    },
 ]
 
 export const INIT_COLUMN_LIST: Column[] = [
@@ -244,6 +292,78 @@ export const INIT_COLUMN_LIST: Column[] = [
     {
         id: 8,
         title: "column 8",
+        content:
+            "魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリット",
+        url: "/images/column-8.jpg",
+        tag: [{ name: "魚料理" }, { name: "和食" }, { name: "DHA" }],
+        created_at: new Date("2022-05-21"),
+    },
+    {
+        id: 9,
+        title: "column 9",
+        content:
+            "魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリット",
+        url: "/images/column-1.jpg",
+        tag: [{ name: "魚料理" }, { name: "和食" }, { name: "DHA" }],
+        created_at: new Date("2022-05-21"),
+    },
+    {
+        id: 10,
+        title: "column 10",
+        content:
+            "魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリット",
+        url: "/images/column-2.jpg",
+        tag: [{ name: "魚料理" }, { name: "和食" }, { name: "DHA" }],
+        created_at: new Date("2022-05-21"),
+    },
+    {
+        id: 11,
+        title: "column 11",
+        content:
+            "魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリット",
+        url: "/images/column-3.jpg",
+        tag: [{ name: "魚料理" }, { name: "和食" }, { name: "DHA" }],
+        created_at: new Date("2022-05-21"),
+    },
+    {
+        id: 12,
+        title: "column 12",
+        content:
+            "魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリット",
+        url: "/images/column-4.jpg",
+        tag: [{ name: "魚料理" }, { name: "和食" }, { name: "DHA" }],
+        created_at: new Date("2022-05-21"),
+    },
+    {
+        id: 13,
+        title: "column 13",
+        content:
+            "魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリット",
+        url: "/images/column-5.jpg",
+        tag: [{ name: "魚料理" }, { name: "和食" }, { name: "DHA" }],
+        created_at: new Date("2022-05-21"),
+    },
+    {
+        id: 14,
+        title: "column 14",
+        content:
+            "魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリット",
+        url: "/images/column-6.jpg",
+        tag: [{ name: "魚料理" }, { name: "和食" }, { name: "DHA" }],
+        created_at: new Date("2022-05-21"),
+    },
+    {
+        id: 15,
+        title: "column 15",
+        content:
+            "魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリット",
+        url: "/images/column-7.jpg",
+        tag: [{ name: "魚料理" }, { name: "和食" }, { name: "DHA" }],
+        created_at: new Date("2022-05-21"),
+    },
+    {
+        id: 16,
+        title: "column 16",
         content:
             "魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリット",
         url: "/images/column-8.jpg",

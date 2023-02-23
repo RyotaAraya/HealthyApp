@@ -6,14 +6,19 @@ import { Column } from "@/types"
 
 type Props = {
     columnList: Column[]
+    displayCount: number
+    handleShowMore: () => void
 }
 
-export const ColumnList: FC<Props> = ({ columnList }) => {
-    //TODO:ベタ書きなのでデータ取得した値をmapで表示する
+export const ColumnList: FC<Props> = ({
+    columnList,
+    displayCount,
+    handleShowMore,
+}) => {
     return (
         <div className={styles.wrap}>
             <div className={styles.container}>
-                {columnList.map((item) => (
+                {columnList.slice(0, displayCount).map((item) => (
                     <ColumnItem
                         key={item.id}
                         content={item.content}
@@ -24,7 +29,10 @@ export const ColumnList: FC<Props> = ({ columnList }) => {
                 ))}
             </div>
             <div>
-                <Button title="コラムをもっと見る" />
+                <Button
+                    title="コラムをもっと見る"
+                    handleShowMore={handleShowMore}
+                />
             </div>
         </div>
     )
