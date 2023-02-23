@@ -1,4 +1,4 @@
-import { useState, FC } from "react"
+import { useState } from "react"
 import { Meal } from "@/types"
 
 type Props = {
@@ -6,8 +6,10 @@ type Props = {
 }
 
 export const useMyPageTemplate = ({ mealList }: Props) => {
+    const [displayCount, setDisplayCount] = useState(8)
     const [originMealList, setMealList] = useState(mealList)
 
+    //六角形のメニューボタンを押下することによって朝食、昼食ごとに表示する
     const handleFilter = (title: string) => {
         console.log("title", title)
         const newOriginMealList = mealList.filter((meal) => {
@@ -15,8 +17,12 @@ export const useMyPageTemplate = ({ mealList }: Props) => {
         })
         setMealList(newOriginMealList)
     }
+    //もっと見るボタン押下時 表示可能数を件増やす
+    const handleShowMore = () => {
+        setDisplayCount(displayCount + 8)
+    }
 
-    const states = { originMealList }
-    const actions = { handleFilter }
+    const states = { originMealList, displayCount }
+    const actions = { handleFilter, handleShowMore }
     return [states, actions] as const
 }
