@@ -6,20 +6,34 @@ import { useMyRecordTemplate } from "@/components/Templates/MyRecordTemplate/use
 import { INIT_DIARY_LIST as diaryList } from "@/constants/tmpData"
 
 const MyRecordTemplate = () => {
-    const [{ originDiaryList, displayCount }, { handleShowMore }] =
-        useMyRecordTemplate({
-            diaryList,
-        })
+    const [
+        { originDiaryList, displayCount, ContainerRef },
+        { handleShowMore, handleSmoothScroll },
+    ] = useMyRecordTemplate({
+        diaryList,
+    })
+    //Smooth Scroll用
+    const [BodyRecordRef, MyExerciseRef, MyDiaryRef] = ContainerRef
+
     return (
         <>
-            <TransitionMenu />
-            <BodyRecord />
-            <MyExercise />
-            <MyDiary
-                originDiaryList={originDiaryList}
-                displayCount={displayCount}
-                handleShowMore={handleShowMore}
+            <TransitionMenu
+                handleSmoothScroll={handleSmoothScroll}
+                ContainerRef={ContainerRef}
             />
+            <div ref={BodyRecordRef}>
+                <BodyRecord />
+            </div>
+            <div ref={MyExerciseRef}>
+                <MyExercise />
+            </div>
+            <div ref={MyDiaryRef}>
+                <MyDiary
+                    originDiaryList={originDiaryList}
+                    displayCount={displayCount}
+                    handleShowMore={handleShowMore}
+                />
+            </div>
         </>
     )
 }

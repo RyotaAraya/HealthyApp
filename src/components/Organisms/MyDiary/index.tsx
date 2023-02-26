@@ -2,7 +2,6 @@ import Button from "@/components/Atoms/Button"
 import MyDiaryItem from "@/components/Molecules/MyDiaryItem"
 import styles from "@/components/Organisms/MyDiary/MyDiary.module.scss"
 import { Diary } from "@/types"
-import { INIT_DIARY_LIST } from "@/constants/tmpData"
 
 type Props = {
     originDiaryList: Diary[]

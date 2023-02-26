@@ -1,15 +1,24 @@
 import styles from "@/components/Molecules/TransitionButton/TransitionButton.module.scss"
-import { FC } from "react"
 import Image from "next/image"
 import type { Transition } from "@/types"
 
-export const TransitionButton: FC<Transition> = ({
+type Props = Transition & {
+    handleSmoothScroll: (title: any) => void
+    ContainerRefItem: any
+}
+
+export const TransitionButton = ({
     title,
     url,
     description,
-}) => {
+    handleSmoothScroll,
+    ContainerRefItem,
+}: Props) => {
     return (
-        <button className={styles.container}>
+        <button
+            className={styles.container}
+            onClick={() => handleSmoothScroll(ContainerRefItem)}
+        >
             <Image src={url} alt={title} fill />
             <p className={styles.title}>{title}</p>
             <div className={styles.wrapp}>

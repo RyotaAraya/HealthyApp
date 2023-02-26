@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useRef } from "react"
 import { Diary } from "@/types"
 
 type Props = {
@@ -12,7 +12,18 @@ export const useMyRecordTemplate = ({ diaryList }: Props) => {
     const handleShowMore = () => {
         setDisplayCount(displayCount + 8)
     }
-    const states = { originDiaryList, displayCount }
-    const actions = { handleShowMore }
+
+    const handleSmoothScroll = (title: any) => {
+        title.current?.scrollIntoView("smooth")
+    }
+
+    //Smooth Scroll用
+    const BodyRecordRef = useRef(null)
+    const MyExerciseRef = useRef(null)
+    const MyDiaryRef = useRef(null)
+    const ContainerRef = [BodyRecordRef, MyExerciseRef, MyDiaryRef]
+
+    const states = { originDiaryList, displayCount, ContainerRef }
+    const actions = { handleShowMore, handleSmoothScroll }
     return [states, actions] as const
 }
