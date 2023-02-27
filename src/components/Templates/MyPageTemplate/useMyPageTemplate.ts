@@ -11,7 +11,6 @@ export const useMyPageTemplate = ({ mealList }: Props) => {
 
     //六角形のメニューボタンを押下することによって朝食、昼食ごとに表示する
     const handleFilter = (title: string) => {
-        console.log("title", title)
         const newOriginMealList = mealList.filter((meal) => {
             return meal.category === title
         })

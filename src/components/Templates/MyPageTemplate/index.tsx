@@ -12,9 +12,12 @@ const MyPageTemplate = ({ mealList }: any) => {
             mealList,
         })
 
+    //最新の画像をTOPに表示する
+    const mainPhoto = mealList[0]?.image?.url || "/images/no-image.png"
+
     return (
         <>
-            <Progress />
+            <Progress mainPhoto={mainPhoto} />
             <MealFilter handleFilter={handleFilter} />
             <MealRecord
                 mealList={originMealList}

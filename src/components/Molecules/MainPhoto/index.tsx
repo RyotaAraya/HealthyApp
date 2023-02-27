@@ -1,11 +1,15 @@
 import Image from "next/image"
 import styles from "@/components/Molecules/MainPhoto/MainPhoto.module.scss"
 
-export const MainPhoto = () => {
+type Props = {
+    mainPhoto: string
+}
+
+export const MainPhoto = ({ mainPhoto }: Props) => {
     return (
         <div className={styles.container}>
             <Image
-                src="/images/main_photo.png"
+                src={mainPhoto}
                 alt="main_photo"
                 width={540}
                 height={312}
