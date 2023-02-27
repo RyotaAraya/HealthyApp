@@ -10,44 +10,44 @@ export const HEXAGON_MENU_LIST: Hexagon[] = [
 export const TRANSITION_MENU_LIST: Transition[] = [
     {
         title: "BODY RECORD",
-        url: "/images/MyRecommend-1.jpg",
+        url: "/images/image_body.svg",
         description: "カラダの記録",
     },
     {
         title: "MY EXERCISE",
-        url: "/images/MyRecommend-2.jpg",
+        url: "/images/image_exercise.svg",
         description: "運動の記録",
     },
     {
         title: "MY DIARY",
-        url: "/images/MyRecommend-3.jpg",
+        url: "/images/image_diary.svg",
         description: "日記",
     },
 ]
 
 export const COLUMN_FILTER_LIST: ColumnFilter[] = [
     {
-        title: "RECOMMENDED COLUMN",
-        name: "オススメ",
+        title: "COLUMN",
+        name: "おすすめ",
     },
     {
-        title: "RECOMMENDED DIET",
-        name: "ダイエット",
-    },
-    {
-        title: "RECOMMENDED BEAUTY",
+        title: "BEAUTY",
         name: "美容",
     },
     {
-        title: "RECOMMENDED HEALTH",
+        title: "HEALTH",
         name: "健康",
+    },
+    {
+        title: "DIET",
+        name: "ダイエット",
     },
 ]
 
 export const DRAWER_MENU: DrawerMenu[] = [
     {
-        name: "自分の記録",
-        link: "/my-record",
+        name: "記録",
+        link: "/record",
     },
     {
         name: "体重グラフ",
@@ -55,10 +55,6 @@ export const DRAWER_MENU: DrawerMenu[] = [
     },
     {
         name: "目標",
-        link: "#",
-    },
-    {
-        name: "選択中のコース",
         link: "#",
     },
     {

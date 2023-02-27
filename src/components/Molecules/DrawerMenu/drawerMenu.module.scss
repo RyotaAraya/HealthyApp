@@ -4,6 +4,7 @@
     right: 0;
     transform: translate(400px);
     position: fixed;
+    z-index: 70;
     ul {
         display: flex;
         flex-flow: column;
