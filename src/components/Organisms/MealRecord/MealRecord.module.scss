@@ -2,7 +2,6 @@
 
 .wrap {
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
 
@@ -11,11 +10,10 @@
         display: flex;
         flex-wrap: wrap;
         gap: 8px;
-        justify-content: center;
         align-items: center;
+        justify-content: center;
         @include tab {
             width: 100%;
-            justify-content: space-evenly;
         }
     }
 }
