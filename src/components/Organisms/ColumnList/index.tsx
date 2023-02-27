@@ -21,10 +21,10 @@ export const ColumnList: FC<Props> = ({
                 {columnList.slice(0, displayCount).map((item) => (
                     <ColumnItem
                         key={item.id}
-                        content={item.content}
-                        url={item.url}
+                        title={item.title}
+                        image={item.image}
                         tag={item.tag}
-                        created_at={item.created_at}
+                        createdAt={item.createdAt}
                     />
                 ))}
             </div>

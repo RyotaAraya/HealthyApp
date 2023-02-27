@@ -38,12 +38,15 @@ export type Diary = {
 }
 
 export type Column = {
-    id: number
+    id: string
     title: string
     content: string
-    url: string
+    image: Image
     tag: HashTag[]
-    created_at: Date
+    createdAt: string
+    updatedAt?: string
+    revisedAt?: string
+    publishedAt?: string
 }
 
 // Menuなどで使用
