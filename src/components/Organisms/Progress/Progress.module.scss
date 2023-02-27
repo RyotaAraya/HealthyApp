@@ -1,4 +1,9 @@
+@import "../../../styles/mixin";
 .container {
     display: flex;
     height: 312px;
+    @include tab {
+        flex-flow: column;
+        height: auto;
+    }
 }

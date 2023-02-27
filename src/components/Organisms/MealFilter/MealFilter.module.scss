@@ -1,9 +1,23 @@
+@import "../../../styles/mixin";
+
 .container {
     display: flex;
     justify-content: center;
     margin: 24px 0px;
+    @include tab {
+        margin: 20px 16px;
+    }
+    @include sp {
+        margin: 20px 2px;
+    }
 
     > :not(:last-child) {
         margin-right: 75px;
+        @include tab {
+            margin-right: 20px;
+        }
+        @include sp {
+            margin-right: 4px;
+        }
     }
 }

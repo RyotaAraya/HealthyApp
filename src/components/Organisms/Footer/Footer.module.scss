@@ -1,20 +1,39 @@
+@import "../../../styles/mixin";
+
 .container {
     display: flex;
     width: 100%;
-    height: 128px;
+    min-height: 128px;
     background-color: var(--dark500);
     padding-left: 160px;
     padding-right: 160px;
     align-items: center;
     margin-top: 64px;
+    @include tab {
+        padding: 0 8px;
+    }
 
     ul {
         display: flex;
         font-size: 11px;
         font-weight: 300;
         color: var(--light);
+        @include tab {
+            padding: 0 10px;
+            height: auto;
+            flex-flow: column;
+            li {
+                padding: 16px;
+                @include sp {
+                    padding: 10px;
+                }
+            }
+        }
         > :not(:last-child) {
             margin-right: 45px;
+            @include tab {
+                margin-right: 0px;
+            }
         }
     }
 }

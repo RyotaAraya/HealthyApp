@@ -7,10 +7,10 @@ const Layout = (props: any) => {
     return (
         <>
             <Header />
-            <main className={styles.container}>
+            <section className={styles.container}>
                 {props.children}
                 <ScrollTopButton />
-            </main>
+            </section>
             <Footer />
         </>
     )

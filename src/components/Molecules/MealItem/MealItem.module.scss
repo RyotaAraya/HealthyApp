@@ -1,6 +1,15 @@
+@import "../../../styles/mixin";
+
 .container {
     position: relative;
-
+    @include tab {
+        width: 48%;
+    }
+    img {
+        @include tab {
+            width: 100%;
+        }
+    }
     div {
         background-color: var(--primary300);
         height: 32px;

@@ -1,4 +1,10 @@
+@import "../../../styles/mixin";
+
 .container {
     width: 1280px;
     margin: 0 auto;
+    @include tab {
+        width: 100%;
+        margin: 0;
+    }
 }

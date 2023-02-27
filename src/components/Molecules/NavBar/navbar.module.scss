@@ -1,3 +1,5 @@
+@import "../../../styles/mixin";
+
 .nav {
     display: flex;
     align-items: center;
@@ -6,13 +8,21 @@
         font-weight: 300;
         padding-left: 8px;
     }
-}
-
-.navItem {
-    width: 160px;
-    margin-right: 8px;
-    display: flex;
-    align-items: center;
+    .navItem {
+        width: 160px;
+        margin-right: 8px;
+        display: flex;
+        align-items: center;
+        @include tab {
+            width: 30px;
+            margin-right: 30px;
+        }
+        p {
+            @include tab {
+                display: none;
+            }
+        }
+    }
 }
 
 .hamburgerMenu {

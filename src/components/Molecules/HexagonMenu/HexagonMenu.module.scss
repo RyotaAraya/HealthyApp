@@ -1,3 +1,5 @@
+@import "../../../styles/mixin";
+
 .container {
     display: flex;
     position: relative;
@@ -9,6 +11,11 @@
     background: -moz-linear-gradient(right, #9996c6, #afd2f0);
     background: -webkit-linear-gradient(right, #9996c6, #afd2f0);
     background: linear-gradient(to left, #9996c6, #afd2f0);
+    @include tab {
+        height: 100px;
+        width: 100%;
+        border-radius: 40%;
+    }
 
     .content {
         display: flex;
