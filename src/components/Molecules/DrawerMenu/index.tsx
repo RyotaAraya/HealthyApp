@@ -1,4 +1,4 @@
-import IconMenu from "@/components/Atoms/IconMenu"
+import Icon from "@/components/Atoms/Icon"
 import Link from "next/link"
 import styles from "@/components/Molecules/DrawerMenu/drawerMenu.module.scss"
 import { DRAWER_MENU } from "@/constants"
@@ -9,7 +9,7 @@ export const DrawerMenu = () => {
     return (
         <>
             <button onClick={handleIsShow}>
-                <IconMenu url={"/icons/icon_menu.svg"} />
+                <Icon url={"/icons/icon_menu.svg"} />
             </button>
             <div
                 className={`${styles.container} ${
@@ -18,7 +18,7 @@ export const DrawerMenu = () => {
             >
                 <ul>
                     <button onClick={handleIsShow}>
-                        <IconMenu url={"/icons/icon_close.svg"} />
+                        <Icon url={"/icons/icon_close.svg"} />
                     </button>
                     {DRAWER_MENU.map((item, index) => (
                         <Link key={index} href={item.link}>

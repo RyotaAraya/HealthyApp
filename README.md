@@ -1,6 +1,6 @@
 ## タイトル
 
-HEALTY-APP
+HealthCare-APP
 
 ## 説明
 
@@ -14,11 +14,11 @@ NextJS、Typescript、SCSS、module CSS、Atomic Design
 
 ### 今後実装したいもの
 
-- ログイン機能
-- API との連携部分
-- 状態管理
-- Header と Footer の遷移先
-- レスポンシブ対応
+-   ログイン機能
+-   API との連携部分
+-   状態管理
+-   Header と Footer の遷移先
+-   レスポンシブ対応
 
 ## インストールおよび実行方法
 
@@ -43,4 +43,4 @@ npm run start
 
 ## その他
 
-残作業などはTODOとして記載
+残作業などは TODO として記載

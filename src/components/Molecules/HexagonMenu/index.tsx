@@ -1,8 +1,6 @@
 import { FC } from "react"
-import Image from "next/image"
 import styles from "@/components/Molecules/HexagonMenu/HexagonMenu.module.scss"
-import IconKnife from "@/components/Atoms/IconKnife"
-import IconCup from "@/components/Atoms/IconCup"
+import Icon from "@/components/Atoms/Icon"
 import type { Hexagon } from "@/types"
 
 type Props = Hexagon & {
@@ -15,14 +13,20 @@ export const HexagonMenu: FC<Props> = ({ title, icon, handleFilter }) => {
             className={styles.container}
             onClick={() => handleFilter(title)}
         >
-            <Image
-                src="/hexagon.svg"
-                alt="hexagonMenu"
-                height={136}
-                width={136}
-            />
             <div className={styles.content}>
-                {icon === "IconKnife" ? <IconKnife /> : <IconCup />}
+                {icon === "IconKnife" ? (
+                    <Icon
+                        url={"/icons/icon_knife.svg"}
+                        width={56}
+                        height={56}
+                    />
+                ) : (
+                    <Icon
+                        url={"/icons/icon_snack.svg"}
+                        width={56}
+                        height={56}
+                    />
+                )}
                 <span className={styles.title}>{title}</span>
             </div>
         </button>

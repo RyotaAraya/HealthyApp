@@ -1,4 +1,14 @@
-<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect opacity="0.01" width="32" height="32" fill="#FF963C"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M28.5 25.2975H16.0722L8.07178 31V25.2975H3.5V3H28.5V25.2975H28.5ZM26.2142 5.27186H5.78577V23.0256H10.3576V26.5755L15.3374 23.0256H26.2142V5.27186ZM17.3634 13.391V19.9249H14.7335V13.391H17.3634ZM16.048 11.4314C16.9555 11.4314 17.6913 10.6998 17.6913 9.79798C17.6913 8.896 16.9555 8.16444 16.048 8.16444C15.1405 8.16444 14.4044 8.89601 14.4044 9.79798C14.4044 10.6998 15.1405 11.4314 16.048 11.4314Z" fill="#FF963C"/>
+<!--?xml version="1.0" encoding="utf-8"?-->
+<!-- Generator: Adobe Illustrator 18.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+
+<svg version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="width: 256px; height: 256px; opacity: 1;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#4B4B4B;}
+</style>
+<g>
+	<path class="st0" d="M0,64v384h512V64H0z M264.132,266.765c-1.996,1.688-4.95,2.657-8.1,2.657c-3.153,0-6.098-0.964-8.083-2.642
+		L48,112h416L264.132,266.765z M95.11,194.306l69.518,58.954L48,368V160L95.11,194.306z M199.288,282.652l16.35,13.866
+		c10.836,9.215,25.169,14.288,40.361,14.288c15.236,0,29.588-5.071,40.418-14.282l16.321-13.846L432,400H80L199.288,282.652z
+		 M347.394,253.282L464,160v208L347.394,253.282z" style="fill: rgb(153, 150, 198);"></path>
+</g>
 </svg>
