@@ -10,17 +10,17 @@ export const HEXAGON_MENU_LIST: Hexagon[] = [
 export const TRANSITION_MENU_LIST: Transition[] = [
     {
         title: "BODY RECORD",
-        url: "/images/MyRecommend-1.svg",
+        url: "/images/MyRecommend-1.jpg",
         description: "自分のカラダの記録",
     },
     {
         title: "MY EXERCISE",
-        url: "/images/MyRecommend-2.svg",
+        url: "/images/MyRecommend-2.jpg",
         description: "自分の運動の記録",
     },
     {
         title: "MY DIARY",
-        url: "/images/MyRecommend-3.svg",
+        url: "/images/MyRecommend-3.jpg",
         description: "自分の日記",
     },
 ]
