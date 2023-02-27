@@ -4,6 +4,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+    justify-content: center;
 
     .container {
         width: 960px;
@@ -11,7 +12,7 @@
         flex-wrap: wrap;
         gap: 8px;
         align-items: center;
-        justify-content: center;
+        justify-content: start;
         @include tab {
             width: 100%;
         }
