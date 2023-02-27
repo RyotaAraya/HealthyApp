@@ -22,7 +22,7 @@ export const MyDiary = ({
                     <MyDiaryItem
                         key={item.id}
                         content={item.content}
-                        created_at={item.created_at}
+                        createdAt={item.createdAt}
                     />
                 ))}
             </div>

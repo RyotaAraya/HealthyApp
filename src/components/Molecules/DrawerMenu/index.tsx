@@ -18,7 +18,11 @@ export const DrawerMenu = () => {
             >
                 <ul>
                     <button onClick={handleIsShow}>
-                        <Icon url={"/icons/icon_close.svg"} />
+                        <Icon
+                            url={"/icons/icon_close.svg"}
+                            width={20}
+                            height={20}
+                        />
                     </button>
                     {DRAWER_MENU.map((item, index) => (
                         <Link key={index} href={item.link}>

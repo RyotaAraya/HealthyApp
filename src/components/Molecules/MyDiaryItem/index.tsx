@@ -3,12 +3,12 @@ import styles from "@/components/Molecules/MyDiaryItem/MyDiaryItem.module.scss"
 import { Diary } from "@/types"
 import { FormatDate } from "@/utils"
 
-export const MyDiaryItem: FC<Omit<Diary, "id">> = ({ content, created_at }) => {
+export const MyDiaryItem: FC<Omit<Diary, "id">> = ({ content, createdAt }) => {
     //TODO:ベタ書き、取得したデータをもとに表示する
 
     //データ整形を行い表示する
-    const date = FormatDate(created_at, "yyyy.MM.dd")
-    const time = FormatDate(created_at, "HH:mm")
+    const date = FormatDate(new Date(createdAt), "yyyy.MM.dd")
+    const time = FormatDate(new Date(createdAt), "HH:mm")
 
     return (
         <div className={styles.container}>

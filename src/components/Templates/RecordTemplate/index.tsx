@@ -3,9 +3,11 @@ import BodyRecord from "@/components/Organisms/BodyRecord"
 import MyExercise from "@/components/Organisms/MyExercise"
 import MyDiary from "@/components/Organisms/MyDiary"
 import { useRecordTemplate } from "@/components/Templates/RecordTemplate/useRecordTemplate"
-import { INIT_DIARY_LIST as diaryList } from "@/constants/tmpData"
 
-const RecordTemplate = () => {
+type Props = {
+    diaryList: any
+}
+const RecordTemplate = ({ diaryList }: Props) => {
     const [
         { originDiaryList, displayCount, ContainerRef },
         { handleShowMore, handleSmoothScroll },
@@ -14,7 +16,6 @@ const RecordTemplate = () => {
     })
     //Smooth Scroll用
     const [BodyRecordRef, MyExerciseRef, MyDiaryRef] = ContainerRef
-
     return (
         <>
             <TransitionMenu
