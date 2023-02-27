@@ -21,7 +21,7 @@ export const MealRecord: FC<Props> = ({
                 {mealList.slice(0, displayCount).map((item) => (
                     <MealItem
                         key={item.id}
-                        url={item.url}
+                        image={item.image}
                         category={item.category}
                         date={item.date}
                     />

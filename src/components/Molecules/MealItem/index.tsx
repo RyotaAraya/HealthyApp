@@ -4,9 +4,9 @@ import { FC } from "react"
 import { Meal } from "@/types"
 import { FormatDate } from "@/utils"
 
-export const MealItem: FC<Omit<Meal, "id" | "created_at">> = ({
+export const MealItem: FC<Omit<Meal, "id" | "createdAt">> = ({
     category,
-    url,
+    image,
     date,
 }) => {
     const dayConvert = () => {
@@ -17,7 +17,7 @@ export const MealItem: FC<Omit<Meal, "id" | "created_at">> = ({
 
     return (
         <button className={styles.container}>
-            <Image src={url} width={234} height={234} alt="Meal" />
+            <Image src={image.url} width={234} height={234} alt="Meal" />
             <div>
                 <span>{dayConvert()}</span>
             </div>
