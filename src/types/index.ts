@@ -16,19 +16,19 @@ export type HashTag = {
 
 export type Image = {
     url: string
-    height?: string
-    width?: string
+    height?: number
+    width?: number
 }
 
 export type Meal = {
-    id: number
+    id: string
     category: Category
     image: Image
     date: string
-    createdAt: Date
-    updatedAt?: Date
-    revisedAt?: Date
-    publishedAt?: Date
+    createdAt: string
+    updatedAt?: string
+    revisedAt?: string
+    publishedAt?: string
 }
 
 export type Diary = {
