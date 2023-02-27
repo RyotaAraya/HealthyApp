@@ -1,7 +1,16 @@
+@import "../../../styles/mixin";
+
 .container {
     display: flex;
     flex-wrap: wrap;
     margin: 56px auto 56px;
     width: 960px;
     gap: 48px;
+    @include tab {
+        justify-content: space-between;
+        height: auto;
+        width: 100%;
+        margin: 4px 0 0 0;
+        gap: 4px;
+    }
 }

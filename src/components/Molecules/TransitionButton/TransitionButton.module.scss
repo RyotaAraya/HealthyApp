@@ -1,3 +1,5 @@
+@import "../../../styles/mixin";
+
 .container {
     display: flex;
     position: relative;
@@ -7,8 +9,15 @@
     align-items: center;
     flex-direction: column;
 
+    @include tab {
+        width: 30%;
+        height: 160px;
+    }
     img {
         object-fit: cover;
+        @include tab {
+            width: 100%;
+        }
     }
 
     &::after {
@@ -30,6 +39,9 @@
         font-size: 25px;
         line-height: 30px;
         text-align: center;
+        @include tab {
+            font-size: 12px;
+        }
     }
 
     .wrapp {

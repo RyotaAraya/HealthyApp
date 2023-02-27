@@ -10,10 +10,9 @@
     width: 960px;
     height: 304px;
 
-    img {
-        display: "block";
-    }
     @include tab {
         width: 100%;
+        height: auto;
+        margin: 30px 0;
     }
 }
