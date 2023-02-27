@@ -12,7 +12,7 @@ export const MainPhoto = ({ mainPhoto }: Props) => {
                 src={mainPhoto}
                 alt="main_photo"
                 width={540}
-                height={312}
+                height={304}
                 priority
             />
         </div>

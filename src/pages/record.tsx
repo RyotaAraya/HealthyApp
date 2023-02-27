@@ -1,5 +1,5 @@
 import Head from "next/head"
-import MyRecordTemplate from "@/components/Templates/MyRecordTemplate"
+import RecordTemplate from "@/components/Templates/RecordTemplate"
 
 export default function Record() {
     return (
@@ -8,7 +8,7 @@ export default function Record() {
                 <title>Record</title>
             </Head>
             <main>
-                <MyRecordTemplate />
+                <RecordTemplate />
             </main>
         </>
     )

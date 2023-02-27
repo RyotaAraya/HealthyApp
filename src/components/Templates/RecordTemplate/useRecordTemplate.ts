@@ -4,7 +4,7 @@ import { Diary } from "@/types"
 type Props = {
     diaryList: Diary[]
 }
-export const useMyRecordTemplate = ({ diaryList }: Props) => {
+export const useRecordTemplate = ({ diaryList }: Props) => {
     const [displayCount, setDisplayCount] = useState(8)
     const [originDiaryList, setDiaryList] = useState(diaryList)
 

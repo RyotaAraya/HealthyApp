@@ -16,7 +16,7 @@ export const MyDiary = ({
 }: Props) => {
     return (
         <div className={styles.wrap}>
-            <h3 className={styles.title}>MY DIARY</h3>
+            <h3 className={styles.title}>日記</h3>
             <div className={styles.container}>
                 {originDiaryList.slice(0, displayCount).map((item) => (
                     <MyDiaryItem
