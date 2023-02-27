@@ -12,12 +12,12 @@
     }
 
     > :not(:last-child) {
-        margin-right: 75px;
+        margin-right: 60px;
         @include tab {
             margin-right: 20px;
         }
         @include sp {
-            margin-right: 4px;
+            margin-right: 6px;
         }
     }
 }

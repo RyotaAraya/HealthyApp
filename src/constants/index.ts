@@ -1,6 +1,7 @@
 import { Hexagon, Transition, ColumnFilter, DrawerMenu } from "@/types"
 
 export const HEXAGON_MENU_LIST: Hexagon[] = [
+    { title: "All", icon: "IconKnife" },
     { title: "Morning", icon: "IconKnife" },
     { title: "Lunch", icon: "IconKnife" },
     { title: "Dinner", icon: "IconKnife" },

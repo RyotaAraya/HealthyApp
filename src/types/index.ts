@@ -8,7 +8,7 @@ export type User = {
     weight: number
     created_at: Date
 }
-export type Category = "Morning" | "Lunch" | "Dinner" | "Snack"
+export type Category = "All" | "Morning" | "Lunch" | "Dinner" | "Snack"
 
 export type HashTag = {
     name: string

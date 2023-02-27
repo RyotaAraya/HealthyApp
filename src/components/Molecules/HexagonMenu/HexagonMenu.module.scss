@@ -14,7 +14,7 @@
     @include tab {
         height: 100px;
         width: 100%;
-        border-radius: 40%;
+        border-radius: 20%;
     }
 
     .content {
@@ -27,6 +27,9 @@
             font-size: 20px;
             font-weight: 400;
             color: var(--light);
+            @include sp {
+                font-size: 14px;
+            }
         }
     }
 }
