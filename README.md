@@ -24,20 +24,35 @@ NextJS、Typescript、SCSS、module CSS、Atomic Design
 ### 依存関係のインストール
 
 ```
-npm i
+yarn i
 ```
 
 ### 開発モード
 
+-   メイン localhost:3000 で起動
+
 ```
-npm run dev
+yarn dev
+```
+
+-   DB localhost:5555 で起動
+-   DB 情報以外にも Session 情報の確認が可能
+
+```
+npx prisma studio
+```
+
+-   mailServer http://localhost:8025 で起動
+
+```
+docker-compose up
 ```
 
 ### ビルドモード
 
 ```
-npm run build
-npm run start
+yarn build
+yarn start
 ```
 
 ## その他
