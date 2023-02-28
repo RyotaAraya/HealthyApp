@@ -11,6 +11,9 @@
 
     @include tab {
         width: 30%;
+        height: 240px;
+    }
+    @include sp {
         height: 160px;
     }
     img {
