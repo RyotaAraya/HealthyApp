@@ -15,8 +15,6 @@ export default function Record({ diaryList }: any) {
     )
 }
 
-// 日記一覧を取得
-// TODO:型定義したい
 export const getStaticProps = async () => {
     const { contents } = await client.get({
         endpoint: "diaries",

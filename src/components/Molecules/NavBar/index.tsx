@@ -19,6 +19,10 @@ export const NavBar = () => {
                     <Icon url={"/icons/icon_column.svg"} />
                     <p>コラム</p>
                 </Link>
+                <Link className={styles.navItem} href="/diagnosis">
+                    <Icon url={"/icons/icon_robo.svg"} />
+                    <p>AI診断</p>
+                </Link>
                 <DrawerMenu />
             </div>
         </>

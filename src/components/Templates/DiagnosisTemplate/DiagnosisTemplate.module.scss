@@ -1,0 +1,10 @@
+@import "../../../styles/mixin";
+
+.container {
+    margin: 20px auto;
+    padding: 8px;
+    background: var(--dark500);
+    p {
+        margin: 8px;
+    }
+}
