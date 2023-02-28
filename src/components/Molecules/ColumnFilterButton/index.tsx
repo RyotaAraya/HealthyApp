@@ -1,6 +1,7 @@
+import type { FC } from "react"
+
 import styles from "@/components/Molecules/ColumnFilterButton/ColumnFilterButton.module.scss"
-import { FC } from "react"
-import { ColumnFilter } from "@/types"
+import type { ColumnFilter } from "@/types"
 
 export const ColumnFilterButton: FC<ColumnFilter> = ({
     title: recommend_title,

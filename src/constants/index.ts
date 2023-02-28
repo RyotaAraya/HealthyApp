@@ -1,4 +1,4 @@
-import { Hexagon, Transition, ColumnFilter, DrawerMenu } from "@/types"
+import type { ColumnFilter, DrawerMenu, Hexagon, Transition } from "@/types"
 
 export const HEXAGON_MENU_LIST: Hexagon[] = [
     { title: "All", icon: "IconKnife" },

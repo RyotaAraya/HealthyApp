@@ -1,6 +1,7 @@
-import { FC } from "react"
+import type { FC } from "react"
+
 import styles from "@/components/Molecules/MyDiaryItem/MyDiaryItem.module.scss"
-import { Diary } from "@/types"
+import type { Diary } from "@/types"
 import { FormatDate } from "@/utils"
 
 export const MyDiaryItem: FC<Omit<Diary, "id">> = ({ content, createdAt }) => {

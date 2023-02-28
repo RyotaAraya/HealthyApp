@@ -1,6 +1,6 @@
-import Progress from "@/components/Organisms/Progress"
 import MealFilter from "@/components/Organisms/MealFilter"
 import MealRecord from "@/components/Organisms/MealRecord"
+import Progress from "@/components/Organisms/Progress"
 import { useMyPageTemplate } from "@/components/Templates/MyPageTemplate/useMyPageTemplate"
 
 const MyPageTemplate = ({ mealList }: any) => {

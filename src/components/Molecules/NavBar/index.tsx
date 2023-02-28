@@ -1,7 +1,8 @@
-import Logo from "@/components/Atoms/Logo"
-import Icon from "@/components/Atoms/Icon"
-import DrawerMenu from "@/components/Molecules/DrawerMenu"
 import Link from "next/link"
+
+import Icon from "@/components/Atoms/Icon"
+import Logo from "@/components/Atoms/Logo"
+import DrawerMenu from "@/components/Molecules/DrawerMenu"
 import styles from "@/components/Molecules/NavBar/navbar.module.scss"
 
 export const NavBar = () => {

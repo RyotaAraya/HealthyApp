@@ -1,4 +1,5 @@
 import Image from "next/image"
+
 import styles from "@/components/Molecules/MainGraph/MainGraph.module.scss"
 
 export const MainPhoto = () => {

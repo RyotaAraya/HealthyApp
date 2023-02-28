@@ -1,8 +1,9 @@
+import type { FC } from "react"
+
 import Button from "@/components/Atoms/Button"
 import ColumnItem from "@/components/Molecules/ColumnItem"
 import styles from "@/components/Organisms/ColumnList/ColumnList.module.scss"
-import { FC } from "react"
-import { Column } from "@/types"
+import type { Column } from "@/types"
 
 type Props = {
     columnList: Column[]

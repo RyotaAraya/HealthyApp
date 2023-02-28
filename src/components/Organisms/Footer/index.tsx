@@ -1,4 +1,5 @@
 import Link from "next/link"
+
 import styles from "@/components/Organisms/Footer/Footer.module.scss"
 
 export const Footer = () => {

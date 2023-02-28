@@ -1,4 +1,5 @@
 import Image from "next/image"
+
 import styles from "@/components/Organisms/MyExercise/MyExercise.module.scss"
 
 export const MyExercise = () => {

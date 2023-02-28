@@ -1,5 +1,6 @@
 import { useState } from "react"
-import { Column } from "@/types"
+
+import type { Column } from "@/types"
 
 type Props = {
     columnList: Column[]

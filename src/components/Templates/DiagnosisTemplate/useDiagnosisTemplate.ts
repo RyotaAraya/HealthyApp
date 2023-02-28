@@ -1,5 +1,3 @@
-import { useState, useRef } from "react"
-
 export const useDiagnosisTemplate = () => {
     const states = {}
     const actions = {}

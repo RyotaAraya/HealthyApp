@@ -1,7 +1,8 @@
 import Image from "next/image"
+import type { FC } from "react"
+
 import styles from "@/components/Molecules/ColumnItem/ColumnItem.module.scss"
-import { FC } from "react"
-import { Column } from "@/types/"
+import type { Column } from "@/types/"
 import { FormatDate } from "@/utils"
 
 export const ColumnItem: FC<Omit<Column, "id" | "content">> = ({

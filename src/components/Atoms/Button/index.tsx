@@ -1,5 +1,6 @@
+import type { FC } from "react"
+
 import styles from "@/components/Atoms/Button/Button.module.scss"
-import { FC } from "react"
 
 type Props = {
     title: string

@@ -1,7 +1,8 @@
 import Image from "next/image"
+import type { FC } from "react"
+
 import styles from "@/components/Molecules/MealItem/MealItem.module.scss"
-import { FC } from "react"
-import { Meal } from "@/types"
+import type { Meal } from "@/types"
 
 export const MealItem: FC<Omit<Meal, "id" | "createdAt">> = ({
     category,

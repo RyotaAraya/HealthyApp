@@ -1,6 +1,7 @@
-import { FC } from "react"
-import styles from "@/components/Molecules/HexagonMenu/HexagonMenu.module.scss"
+import type { FC } from "react"
+
 import Icon from "@/components/Atoms/Icon"
+import styles from "@/components/Molecules/HexagonMenu/HexagonMenu.module.scss"
 import type { Hexagon } from "@/types"
 
 type Props = Hexagon & {

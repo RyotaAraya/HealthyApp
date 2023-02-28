@@ -1,5 +1,6 @@
 import { useState } from "react"
-import { Meal } from "@/types"
+
+import type { Meal } from "@/types"
 
 type Props = {
     mealList: Meal[]

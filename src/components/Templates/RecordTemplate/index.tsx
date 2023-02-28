@@ -1,7 +1,7 @@
-import TransitionMenu from "@/components/Organisms/TransitionMenu"
 import BodyRecord from "@/components/Organisms/BodyRecord"
-import MyExercise from "@/components/Organisms/MyExercise"
 import MyDiary from "@/components/Organisms/MyDiary"
+import MyExercise from "@/components/Organisms/MyExercise"
+import TransitionMenu from "@/components/Organisms/TransitionMenu"
 import { useRecordTemplate } from "@/components/Templates/RecordTemplate/useRecordTemplate"
 
 type Props = {

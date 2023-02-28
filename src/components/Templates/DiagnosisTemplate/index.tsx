@@ -1,7 +1,8 @@
-import BodyRecord from "@/components/Organisms/BodyRecord"
-import { useDiagnosisTemplate } from "@/components/Templates/DiagnosisTemplate/useDiagnosisTemplate"
-import styles from "@/components/Templates/DiagnosisTemplate/DiagnosisTemplate.module.scss"
 import Link from "next/link"
+
+import BodyRecord from "@/components/Organisms/BodyRecord"
+import styles from "@/components/Templates/DiagnosisTemplate/DiagnosisTemplate.module.scss"
+import { useDiagnosisTemplate } from "@/components/Templates/DiagnosisTemplate/useDiagnosisTemplate"
 
 const RecordTemplate = () => {
     return (

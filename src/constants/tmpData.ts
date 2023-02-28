@@ -1,6 +1,6 @@
 //仮データ置き場
 
-import { User } from "@/types"
+import type { User } from "@/types"
 
 export const INIT_USER_DATA: User = {
     id: 1,

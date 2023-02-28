@@ -1,4 +1,5 @@
 import Head from "next/head"
+
 import RecordTemplate from "@/components/Templates/RecordTemplate"
 import { client } from "@/libs/client"
 

@@ -1,4 +1,5 @@
 import Head from "next/head"
+
 import MyPageTemplate from "@/components/Templates/MyPageTemplate"
 import { client } from "@/libs/client"
 

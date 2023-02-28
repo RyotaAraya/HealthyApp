@@ -1,6 +1,7 @@
-import styles from "@/components/Atoms/ScrollTopButton/ScrollTopButton.module.scss"
 import Image from "next/image"
 import Link from "next/link"
+
+import styles from "@/components/Atoms/ScrollTopButton/ScrollTopButton.module.scss"
 
 export const ScrollTopButton = () => {
     return (

@@ -1,5 +1,6 @@
-import { useState, useRef } from "react"
-import { Diary } from "@/types"
+import { useRef, useState } from "react"
+
+import type { Diary } from "@/types"
 
 type Props = {
     diaryList: Diary[]

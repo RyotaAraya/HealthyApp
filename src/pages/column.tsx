@@ -1,4 +1,5 @@
 import Head from "next/head"
+
 import ColumnTemplate from "@/components/Templates/ColumnTemplate"
 import { client } from "@/libs/client"
 

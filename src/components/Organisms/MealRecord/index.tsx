@@ -1,8 +1,9 @@
+import type { FC } from "react"
+
 import Button from "@/components/Atoms/Button"
 import MealItem from "@/components/Molecules/MealItem"
 import styles from "@/components/Organisms/MealRecord/MealRecord.module.scss"
-import { FC } from "react"
-import { Meal } from "@/types"
+import type { Meal } from "@/types"
 
 type Props = {
     mealList: Meal[]

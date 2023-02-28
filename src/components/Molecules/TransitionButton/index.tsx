@@ -1,5 +1,6 @@
-import styles from "@/components/Molecules/TransitionButton/TransitionButton.module.scss"
 import Image from "next/image"
+
+import styles from "@/components/Molecules/TransitionButton/TransitionButton.module.scss"
 import type { Transition } from "@/types"
 
 type Props = Transition & {
