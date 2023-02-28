@@ -1,12 +1,22 @@
+@import "../../../styles/mixin";
+
 .wrapper {
     display: flex;
     flex-direction: column;
     margin: 56px auto 0;
     width: 960px;
+    @include tab {
+        width: 100%;
+        margin: 4px 0 0 0;
+    }
 
     .container {
         display: flex;
+        justify-content: space-around;
         flex-wrap: wrap;
         gap: 32px;
+        @include tab {
+            gap: 4px;
+        }
     }
 }

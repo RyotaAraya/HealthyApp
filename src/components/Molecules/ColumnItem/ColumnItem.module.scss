@@ -1,3 +1,5 @@
+@import "../../../styles/mixin";
+
 .container {
     position: relative;
     width: 234px;
@@ -5,6 +7,15 @@
     display: flex;
     flex-direction: column;
     margin-bottom: 18px;
+    @include tab {
+        width: 30%;
+    }
+    @include sp {
+        width: 48%;
+    }
+    img {
+        width: 100%;
+    }
 
     .date {
         background-color: var(--primary300);

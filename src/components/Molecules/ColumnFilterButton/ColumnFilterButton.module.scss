@@ -1,15 +1,29 @@
+@import "../../../styles/mixin";
+
 .container {
     height: 144px;
     width: 216px;
     padding: 24px 8px 22px 8px;
     background-color: var(--dark600);
-
+    @include tab {
+        width: 48%;
+        height: 160px;
+        padding: 20px 4px;
+    }
+    @include sp {
+        height: 120px;
+    }
     h3 {
         font-size: 22px;
         font-weight: 300;
         text-align: center;
         color: var(--primary300);
         margin-bottom: 8px;
+
+        @include tab {
+            font-size: 18px;
+            margin-bottom: 4px;
+        }
 
         &::after {
             content: " ";
@@ -25,5 +39,8 @@
         color: var(--light);
         font-size: 18px;
         font-weight: 200;
+        @include tab {
+            font-size: 14px;
+        }
     }
 }
