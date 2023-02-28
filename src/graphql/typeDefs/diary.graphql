@@ -19,7 +19,6 @@ type Mutation {
 
 fragment DiaryFragment on Diary {
     id
-    userId
     content
     createdAt
     updatedAt
@@ -29,7 +28,7 @@ fragment DiaryFragment on Diary {
 }
 
 query Diaries {
-    diary {
+    diaries {
         ...DiaryFragment
     }
 }
@@ -46,8 +45,8 @@ mutation UpdateDiary($diaryId: String!, $content: String!) {
     }
 }
 
-mutation DeleteDiary($content: String!) {
-    deleteDiary(content: $content) {
+mutation DeleteDiary($diaryId: String!) {
+    deleteDiary(diaryId: $diaryId) {
         ...DiaryFragment
     }
 }

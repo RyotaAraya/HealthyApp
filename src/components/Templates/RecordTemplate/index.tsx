@@ -1,4 +1,5 @@
 import BodyRecord from "@/components/Organisms/BodyRecord"
+import { DiaryList } from "@/components/Organisms/DiaryList"
 import MyDiary from "@/components/Organisms/MyDiary"
 import MyExercise from "@/components/Organisms/MyExercise"
 import TransitionMenu from "@/components/Organisms/TransitionMenu"
@@ -28,6 +29,7 @@ const RecordTemplate = ({ diaryList }: Props) => {
             <div ref={MyExerciseRef}>
                 <MyExercise />
             </div>
+            <DiaryList />
             <div ref={MyDiaryRef}>
                 <MyDiary
                     originDiaryList={originDiaryList}
