@@ -1,6 +1,6 @@
 import type { Resolvers } from "@/generated/resolvers-types"
 
-export const resolve: Resolvers = {
+export const resolvers: Resolvers = {
     Query: {
         diaries: async (_, __, { prisma, currentUser }) => {
             if (!currentUser) {
