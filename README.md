@@ -29,13 +29,13 @@ yarn i
 
 ### 開発モード
 
--   メイン localhost:3000 で起動
+-   メイン http://localhost:3000 で起動
 
 ```
 yarn dev
 ```
 
--   DB localhost:5555 で起動
+-   DB http://localhost:5555 で起動
 -   DB 情報以外にも Session 情報の確認が可能
 
 ```
