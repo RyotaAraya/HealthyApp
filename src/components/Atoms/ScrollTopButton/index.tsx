@@ -1,4 +1,4 @@
-import Image from "next/image"
+import { ChevronUpIcon } from "@heroicons/react/24/solid"
 import Link from "next/link"
 
 import styles from "@/components/Atoms/ScrollTopButton/ScrollTopButton.module.scss"
@@ -6,12 +6,7 @@ import styles from "@/components/Atoms/ScrollTopButton/ScrollTopButton.module.sc
 export const ScrollTopButton = () => {
     return (
         <Link href="#" className={styles.container}>
-            <Image
-                src="/icons/icon_scrollTopButton.svg"
-                width={48}
-                height={48}
-                alt="ScrollTop"
-            />
+            <ChevronUpIcon className={styles.icon} />
         </Link>
     )
 }
