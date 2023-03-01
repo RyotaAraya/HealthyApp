@@ -45,7 +45,7 @@ model User {
   image         String?
   accounts      Account[]
   sessions      Session[]
-  Dairy         Dairy[]
+  Diary         Diary[]
 }
 
 model VerificationToken {
@@ -56,7 +56,7 @@ model VerificationToken {
   @@unique([identifier, token])
 }
 
-model Dairy {
+model Diary {
   id        String   @id @default(cuid())
   userId    String
   content   String

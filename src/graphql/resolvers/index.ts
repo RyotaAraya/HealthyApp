@@ -6,7 +6,7 @@ export const resolvers: Resolvers = {
             if (!currentUser) {
                 throw new Error("User not logged in.")
             }
-            const diaries = await prisma.dairy.findMany({
+            const diaries = await prisma.diary.findMany({
                 orderBy: { createdAt: "desc" },
                 include: { user: true },
                 where: { userId: currentUser.id },
@@ -19,7 +19,7 @@ export const resolvers: Resolvers = {
             if (!currentUser) {
                 throw new Error("User not logged in.")
             }
-            const diary = await prisma.dairy.create({
+            const diary = await prisma.diary.create({
                 data: { userId: currentUser.id, content },
                 include: { user: true },
             })
@@ -33,13 +33,13 @@ export const resolvers: Resolvers = {
             if (!currentUser) {
                 throw new Error("User not logged in.")
             }
-            const targetDiary = await prisma.dairy.findUnique({
+            const targetDiary = await prisma.diary.findUnique({
                 where: { id: diaryId },
             })
             if (targetDiary?.userId !== currentUser.id) {
                 throw new Error("Invalid user")
             }
-            const diary = await prisma.dairy.update({
+            const diary = await prisma.diary.update({
                 where: { id: diaryId },
                 data: {
                     ...(content && { content }),
@@ -52,13 +52,13 @@ export const resolvers: Resolvers = {
             if (!currentUser) {
                 throw new Error("User not logged in.")
             }
-            const targetDiary = await prisma.dairy.findUnique({
+            const targetDiary = await prisma.diary.findUnique({
                 where: { id: diaryId },
             })
             if (targetDiary?.userId !== currentUser.id) {
                 throw new Error("Invalid user")
             }
-            const diary = await prisma.dairy.delete({
+            const diary = await prisma.diary.delete({
                 where: { id: diaryId },
                 include: { user: true },
             })
