@@ -1,6 +1,6 @@
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid"
 import Link from "next/link"
 
-import Icon from "@/components/Atoms/Icon"
 import styles from "@/components/Molecules/DrawerMenu/drawerMenu.module.scss"
 import { useDrawer } from "@/components/Molecules/DrawerMenu/useDrawerMenu"
 import { DRAWER_MENU } from "@/constants"
@@ -10,7 +10,7 @@ export const DrawerMenu = () => {
     return (
         <>
             <button onClick={handleIsShow}>
-                <Icon url={"/icons/icon_menu.svg"} />
+                <Bars3Icon className={styles.icon} />
             </button>
             <div
                 className={`${styles.container} ${
@@ -19,11 +19,7 @@ export const DrawerMenu = () => {
             >
                 <ul>
                     <button onClick={handleIsShow}>
-                        <Icon
-                            url={"/icons/icon_close.svg"}
-                            width={20}
-                            height={20}
-                        />
+                        <XMarkIcon className={styles.icon} />
                     </button>
                     {DRAWER_MENU.map((item, index) => (
                         <Link key={index} href={item.link}>

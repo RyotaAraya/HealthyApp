@@ -1,0 +1,52 @@
+type Diary {
+    id: ID!
+    userId: String!
+    content: String!
+    createdAt: String!
+    updatedAt: String!
+    user: User!
+}
+
+type Query {
+    diaries: [Diary!]!
+}
+
+type Mutation {
+    addDiary(content: String!): Diary!
+    updateDiary(diaryId: String!, content: String!): Diary!
+    deleteDiary(diaryId: String!): Diary!
+}
+
+fragment DiaryFragment on Diary {
+    id
+    content
+    createdAt
+    updatedAt
+    user {
+        ...UserFragment
+    }
+}
+
+query Diaries {
+    diaries {
+        ...DiaryFragment
+    }
+}
+
+mutation AddDiary($content: String!) {
+    addDiary(content: $content) {
+        ...DiaryFragment
+    }
+}
+
+mutation UpdateDiary($diaryId: String!, $content: String!) {
+    updateDiary(diaryId: $diaryId, content: $content) {
+        ...DiaryFragment
+    }
+}
+
+mutation DeleteDiary($diaryId: String!) {
+    deleteDiary(diaryId: $diaryId) {
+        ...DiaryFragment
+    }
+}

@@ -1,0 +1,26 @@
+scalar DateTime
+
+type Diary {
+  content: String!
+  createdAt: String!
+  id: ID!
+  updatedAt: String!
+  user: User!
+  userId: String!
+}
+
+type Mutation {
+  addDiary(content: String!): Diary!
+  deleteDiary(diaryId: String!): Diary!
+  updateDiary(content: String!, diaryId: String!): Diary!
+}
+
+type Query {
+  diaries: [Diary!]!
+}
+
+type User {
+  email: String
+  id: ID
+  name: String
+}

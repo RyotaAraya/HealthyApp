@@ -24,20 +24,38 @@ NextJS、Typescript、SCSS、module CSS、Atomic Design
 ### 依存関係のインストール
 
 ```
-npm i
+yarn i
 ```
 
 ### 開発モード
 
+-   DB と MailHog 起動
+-   MailHog は http://localhost:8025 で確認可能
+
 ```
-npm run dev
+docker-compose up
 ```
+
+-   メイン http://localhost:3000 で起動
+
+```
+yarn dev
+```
+
+-   DB http://localhost:5555 で起動
+-   DB 情報以外にも Session 情報の確認が可能
+
+```
+npx prisma studio
+```
+
+-   mailServer http://localhost:8025 で起動
 
 ### ビルドモード
 
 ```
-npm run build
-npm run start
+yarn build
+yarn start
 ```
 
 ## その他

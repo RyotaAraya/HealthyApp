@@ -23,6 +23,11 @@
         }
     }
 }
+.icon {
+    width: 32px;
+    cursor: pointer;
+    color: var(--primary400);
+}
 .isOpen {
     transform: translate(0);
 }
