@@ -8,11 +8,6 @@ export const Footer = () => {
             <ul className={styles.list}>
                 <li>
                     <Link className={styles.link} href={"/"}>
-                        会員登録
-                    </Link>
-                </li>
-                <li>
-                    <Link className={styles.link} href={"/"}>
                         運営会社
                     </Link>
                 </li>
