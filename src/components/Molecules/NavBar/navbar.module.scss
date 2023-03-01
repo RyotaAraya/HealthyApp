@@ -22,6 +22,11 @@
                 display: none;
             }
         }
+        .icon {
+            width: 32px;
+            cursor: pointer;
+            color: var(--primary400);
+        }
     }
 }
 

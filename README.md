@@ -29,6 +29,13 @@ yarn i
 
 ### 開発モード
 
+-   DB と MailHog 起動
+-   MailHog は http://localhost:8025 で確認可能
+
+```
+docker-compose up
+```
+
 -   メイン http://localhost:3000 で起動
 
 ```
@@ -43,10 +50,6 @@ npx prisma studio
 ```
 
 -   mailServer http://localhost:8025 で起動
-
-```
-docker-compose up
-```
 
 ### ビルドモード
 
