@@ -31,7 +31,7 @@ export const MealRecord: FC<Props> = ({
             <div>
                 <Button
                     title="記録をもっと見る"
-                    handleShowMore={handleShowMore}
+                    handlePushButton={handleShowMore}
                 />
             </div>
         </div>

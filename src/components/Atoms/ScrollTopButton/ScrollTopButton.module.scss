@@ -7,8 +7,15 @@
     right: 96px;
     bottom: 140px;
     z-index: 50;
+    border-radius: 50%;
+    border: 1px solid var(--dark600);
+    opacity: 70%;
     @include tab {
         right: 14px;
         bottom: 14px;
+    }
+    .icon {
+        cursor: pointer;
+        color: var(--dark600);
     }
 }

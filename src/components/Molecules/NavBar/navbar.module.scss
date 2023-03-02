@@ -3,19 +3,23 @@
 .nav {
     display: flex;
     align-items: center;
+    justify-content: flex-end;
     p {
         color: var(--light);
         font-weight: 300;
         padding-left: 8px;
     }
     .navItem {
-        width: 160px;
+        width: 120px;
         margin-right: 8px;
         display: flex;
         align-items: center;
         @include tab {
             width: 30px;
             margin-right: 30px;
+        }
+        @include tab {
+            margin-right: 20px;
         }
         p {
             @include tab {
@@ -26,6 +30,9 @@
             width: 32px;
             cursor: pointer;
             color: var(--primary400);
+            @include sp {
+                width: 24px;
+            }
         }
     }
 }
