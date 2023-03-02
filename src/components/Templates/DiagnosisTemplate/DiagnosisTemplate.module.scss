@@ -1,10 +1,22 @@
 @import "../../../styles/mixin";
 
-.container {
-    margin: 20px auto;
-    padding: 8px;
-    background: var(--dark500);
-    p {
-        margin: 8px;
+.wrap {
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    min-height: 700px;
+    color: var(--dark600);
+    padding: 4px;
+
+    @include sp {
+        min-height: 400px;
+    }
+    .container {
+        .load {
+            margin-top: 20px;
+        }
+        .message {
+            margin-top: 20px;
+        }
     }
 }

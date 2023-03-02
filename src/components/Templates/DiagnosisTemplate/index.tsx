@@ -19,11 +19,6 @@ interface MessageProps {
     key: number
 }
 
-interface InputProps {
-    onSend: (input: string) => void
-    disabled: boolean
-}
-
 export const DiagnosisTemplae = () => {
     const [input, setInput] = useState("")
     const [robRes, setRobRes, setRobRef] = useState("")
@@ -91,8 +86,8 @@ export const DiagnosisTemplae = () => {
     }
 
     return (
-        <main className="relative max-w-2x mx-auto">
-            <div className="sticky top-0 w-full pt-10 px-4">
+        <div className={styles.wrap}>
+            <div className={styles.container}>
                 <InputForm
                     message={message}
                     value={input}
@@ -102,17 +97,15 @@ export const DiagnosisTemplae = () => {
                     title="ASK"
                     handlePushButton={handleSubmit}
                 />
-                <div className="top-4">
-                    {loading && (
-                        <p className="text-gray-500 flex justify-center">
-                            時間がかかる場合があります。1分ほど待っても取得できない場合は再度お試しください。
-                        </p>
-                    )}
-                    {loading && <p>Loading...</p>}
-                </div>
+                {loading && (
+                    <p className={styles.load}>
+                        時間がかかる場合があります。1分ほど待っても取得できない場合は再度お試しください。
+                    </p>
+                )}
+                {loading && <p className={styles.load}>Loading...</p>}
             </div>
 
-            <div className="mt-10 px-4">
+            <div className={styles.container}>
                 {message.map((msg: MessageProps) => (
                     <ChatMessage
                         key={msg.key}
@@ -120,16 +113,12 @@ export const DiagnosisTemplae = () => {
                         from={msg.from}
                     />
                 ))}
-                {message.length === 0 && (
-                    <p className="text-center text-gray-400">
-                        2回質問できます。
-                    </p>
-                )}
-                {message.length >= 4 && (
-                    <p className="text-center text-red-400">終了です。</p>
-                )}
+                <div>
+                    {message.length === 0 && <p>2回質問できます。</p>}
+                    {message.length >= 4 && <p>終了です。</p>}
+                </div>
             </div>
-        </main>
+        </div>
     )
 }
 

@@ -41,7 +41,7 @@ export const InputForm: FC<Props> = ({
                 handleInputChange={handleInputChange}
                 placeholder={placeholder}
             />
-            {!loading && message.length < 2 && (
+            {!loading && message.length < 4 && (
                 <Button title={title} handlePushButton={handlePushButton} />
             )}
         </form>
