@@ -4,12 +4,12 @@ import styles from "@/components/Atoms/Button/Button.module.scss"
 
 type Props = {
     title: string
-    handleShowMore: () => void
+    handlePushButton: () => void
 }
 
-export const Button: FC<Props> = ({ title, handleShowMore }) => {
+export const Button: FC<Props> = ({ title, handlePushButton }) => {
     return (
-        <button className={styles.container} onClick={() => handleShowMore()}>
+        <button className={styles.container} onClick={() => handlePushButton()}>
             <span>{title}</span>
         </button>
     )

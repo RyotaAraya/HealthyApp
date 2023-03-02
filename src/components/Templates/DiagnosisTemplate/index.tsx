@@ -2,6 +2,8 @@
 import Image from "next/image"
 import useState from "react-usestateref"
 
+import Button from "@/components/Atoms/Button"
+import InputForm from "@/components/Atoms/InputForm"
 import BodyRecord from "@/components/Organisms/BodyRecord"
 import styles from "@/components/Templates/DiagnosisTemplate/DiagnosisTemplate.module.scss"
 import { useDiagnosisTemplate } from "@/components/Templates/DiagnosisTemplate/useDiagnosisTemplate"
@@ -121,21 +123,14 @@ export const DiagnosisTemplae = () => {
         <main className="relative max-w-2x mx-auto">
             <div className="sticky top-0 w-full pt-10 px-4">
                 <div className="bg-white border-2 p-2 rounded-lg flex justify-center">
-                    <input
+                    <InputForm
                         value={input}
-                        onChange={(e: any) => setInput(e.target.value)}
-                        className="w-full py-2 px-3 text-gray-800 rounded-lg focus:outline-none"
-                        type="text"
-                        placeholder="質問をどうぞ"
-                        disabled={loading}
+                        loading={loading}
+                        handleInputChange={setInput}
+                        placeholder={"質問をどうぞ"}
                     />
                     {!loading && message.length < 4 && (
-                        <button
-                            onClick={() => handleSubmit()}
-                            className="p-2 bg-gray-200 rounded-md text-gray-500 bottom-1.5 righit-1"
-                        >
-                            Ask
-                        </button>
+                        <Button title="ASK" handlePushButton={handleSubmit} />
                     )}
                 </div>
                 <div className="top-4">

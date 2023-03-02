@@ -1,0 +1,13 @@
+.container {
+    display: block;
+    padding: 8px;
+    margin-top: 28px;
+    font-size: 18px;
+    width: 600px;
+    height: 56px;
+    box-shadow: inner 0 0 4px rgba(0, 0, 0, 0.2);
+
+    @mixin tab {
+        width: 100%;
+    }
+}

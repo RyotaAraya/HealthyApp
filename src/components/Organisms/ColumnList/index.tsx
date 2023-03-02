@@ -32,7 +32,7 @@ export const ColumnList: FC<Props> = ({
             <div>
                 <Button
                     title="コラムをもっと見る"
-                    handleShowMore={handleShowMore}
+                    handlePushButton={handleShowMore}
                 />
             </div>
         </div>

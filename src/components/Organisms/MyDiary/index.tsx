@@ -29,7 +29,7 @@ export const MyDiary = ({
             <div>
                 <Button
                     title="記録をもっと見る"
-                    handleShowMore={handleShowMore}
+                    handlePushButton={handleShowMore}
                 />
             </div>
         </div>
