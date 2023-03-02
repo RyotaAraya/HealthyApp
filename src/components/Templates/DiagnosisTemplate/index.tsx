@@ -22,7 +22,7 @@ interface MessageProps {
 
 export const DiagnosisTemplae = () => {
     const USER_DATA = INIT_USER_DATA
-    const InitialInput = `健康アドバイスをお願いします。\nデータ\n年齢: ${USER_DATA.age}\n性別: ${USER_DATA.sex}\n身長: ${USER_DATA.height}\n体重: ${USER_DATA.weight}\n運動頻度: ${USER_DATA.exercise}\n喫煙頻度: ${USER_DATA.smoking}\n飲酒頻度: ${USER_DATA.drinking}`
+    const InitialInput = `健康アドバイスをお願いします。\n年齢: ${USER_DATA.age}才\n性別: ${USER_DATA.sex}\n身長: ${USER_DATA.height}\n体重: ${USER_DATA.weight}\n運動頻度: ${USER_DATA.exercise}\n喫煙頻度: ${USER_DATA.smoking}\n飲酒頻度: ${USER_DATA.drinking}`
 
     const [input, setInput] = useState(InitialInput)
     const [robRes, setRobRes, setRobRef] = useState("")
@@ -105,15 +105,21 @@ export const DiagnosisTemplae = () => {
     return (
         <div className={styles.wrap}>
             <div className={styles.container}>
-                <InputForm
-                    message={message}
-                    value={input}
-                    loading={loading}
-                    handleInputChange={setInput}
-                    placeholder={"質問をどうぞ"}
-                    title="ASK"
-                    handlePushButton={handleSubmit}
-                />
+                {message.length <= 4 && !loading && (
+                    <InputForm
+                        message={message}
+                        value={input}
+                        loading={loading}
+                        handleInputChange={setInput}
+                        placeholder={"質問をどうぞ"}
+                        title="ASK"
+                        handlePushButton={handleSubmit}
+                    />
+                )}
+                <div>
+                    {message.length === 2 && <p>1回質問できます。</p>}
+                    {message.length >= 4 && <p>終了です。</p>}
+                </div>
                 {loading && (
                     <p className={styles.load}>
                         時間がかかる場合があります。1分ほど待っても取得できない場合は再度お試しください。
@@ -130,10 +136,6 @@ export const DiagnosisTemplae = () => {
                         from={msg.from}
                     />
                 ))}
-                <div>
-                    {message.length === 0 && <p>1回質問できます。</p>}
-                    {message.length >= 4 && <p>終了です。</p>}
-                </div>
             </div>
         </div>
     )
