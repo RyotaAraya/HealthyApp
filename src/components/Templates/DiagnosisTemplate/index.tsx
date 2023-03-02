@@ -1,5 +1,5 @@
 "use client"
-import Image from "next/image"
+import { useEffect, useRef } from "react"
 import useState from "react-usestateref"
 
 import ChatMessage from "@/components/Molecules/ChatMessage"
@@ -7,6 +7,7 @@ import InputForm from "@/components/Molecules/InputForm"
 import BodyRecord from "@/components/Organisms/BodyRecord"
 import styles from "@/components/Templates/DiagnosisTemplate/DiagnosisTemplate.module.scss"
 import { useDiagnosisTemplate } from "@/components/Templates/DiagnosisTemplate/useDiagnosisTemplate"
+import { INIT_USER_DATA } from "@/constants/tmpData"
 
 enum Creator {
     Me = 0,
@@ -20,10 +21,14 @@ interface MessageProps {
 }
 
 export const DiagnosisTemplae = () => {
-    const [input, setInput] = useState("")
+    const USER_DATA = INIT_USER_DATA
+    const InitialInput = `健康アドバイスをお願いします。\nデータ\n年齢: ${USER_DATA.age}\n性別: ${USER_DATA.sex}\n身長: ${USER_DATA.height}\n体重: ${USER_DATA.weight}\n運動頻度: ${USER_DATA.exercise}\n喫煙頻度: ${USER_DATA.smoking}\n飲酒頻度: ${USER_DATA.drinking}`
+
+    const [input, setInput] = useState(InitialInput)
     const [robRes, setRobRes, setRobRef] = useState("")
     const [message, setMessages, messagesRef] = useState<MessageProps[]>([])
     const [loading, setLoading] = useState(false)
+    const firstRef = useRef(true)
 
     const callApi = async () => {
         setLoading(true)
@@ -84,6 +89,18 @@ export const DiagnosisTemplae = () => {
         callApi()
         setInput("")
     }
+    useEffect(() => {
+        if (input === "") return
+        if (process.env.NODE_ENV === "development") {
+            if (firstRef.current) {
+                firstRef.current = false
+                return
+            }
+        }
+        callApi()
+        setInput("")
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [])
 
     return (
         <div className={styles.wrap}>
@@ -114,7 +131,7 @@ export const DiagnosisTemplae = () => {
                     />
                 ))}
                 <div>
-                    {message.length === 0 && <p>2回質問できます。</p>}
+                    {message.length === 0 && <p>1回質問できます。</p>}
                     {message.length >= 4 && <p>終了です。</p>}
                 </div>
             </div>

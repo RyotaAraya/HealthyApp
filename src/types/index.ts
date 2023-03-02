@@ -4,10 +4,17 @@ export type User = {
     id: number
     name: string
     tel: string
+    age: number
+    sex: Sex
     height: number
     weight: number
+    exercise: string
+    smoking: string
+    drinking: string
     created_at: Date
 }
+
+export type Sex = "男性" | "女性"
 export type Category = "All" | "Morning" | "Lunch" | "Dinner" | "Snack"
 
 export type HashTag = {
