@@ -2,8 +2,7 @@
 import Image from "next/image"
 import useState from "react-usestateref"
 
-import Button from "@/components/Atoms/Button"
-import InputForm from "@/components/Atoms/InputForm"
+import InputForm from "@/components/Molecules/InputForm"
 import BodyRecord from "@/components/Organisms/BodyRecord"
 import styles from "@/components/Templates/DiagnosisTemplate/DiagnosisTemplate.module.scss"
 import { useDiagnosisTemplate } from "@/components/Templates/DiagnosisTemplate/useDiagnosisTemplate"
@@ -122,17 +121,15 @@ export const DiagnosisTemplae = () => {
     return (
         <main className="relative max-w-2x mx-auto">
             <div className="sticky top-0 w-full pt-10 px-4">
-                <div className="bg-white border-2 p-2 rounded-lg flex justify-center">
-                    <InputForm
-                        value={input}
-                        loading={loading}
-                        handleInputChange={setInput}
-                        placeholder={"質問をどうぞ"}
-                    />
-                    {!loading && message.length < 4 && (
-                        <Button title="ASK" handlePushButton={handleSubmit} />
-                    )}
-                </div>
+                <InputForm
+                    message={message}
+                    value={input}
+                    loading={loading}
+                    handleInputChange={setInput}
+                    placeholder={"質問をどうぞ"}
+                    title="ASK"
+                    handlePushButton={handleSubmit}
+                />
                 <div className="top-4">
                     {loading && (
                         <p className="text-gray-500 flex justify-center">

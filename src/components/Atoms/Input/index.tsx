@@ -1,6 +1,6 @@
 import type { FC } from "react"
 
-import styles from "@/components/Atoms/InputForm/InputForm.module.scss"
+import styles from "@/components/Atoms/Input/Input.module.scss"
 
 type Props = {
     value: string
@@ -9,7 +9,7 @@ type Props = {
     handleInputChange: (targetValue: string) => void
 }
 
-export const InputForm: FC<Props> = ({
+export const Input: FC<Props> = ({
     value,
     placeholder,
     loading,
@@ -27,4 +27,4 @@ export const InputForm: FC<Props> = ({
     )
 }
 
-export default InputForm
+export default Input
