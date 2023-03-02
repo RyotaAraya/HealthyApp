@@ -2,6 +2,7 @@
 import Image from "next/image"
 import useState from "react-usestateref"
 
+import ChatMessage from "@/components/Molecules/ChatMessage"
 import InputForm from "@/components/Molecules/InputForm"
 import BodyRecord from "@/components/Organisms/BodyRecord"
 import styles from "@/components/Templates/DiagnosisTemplate/DiagnosisTemplate.module.scss"
@@ -21,35 +22,6 @@ interface MessageProps {
 interface InputProps {
     onSend: (input: string) => void
     disabled: boolean
-}
-
-const ChatMessage = ({ text, from }: MessageProps) => {
-    return (
-        <>
-            {from == Creator.Me && (
-                <div className="bg-white p-r rounded-lg flex gap-4 items-center whitespace-pre-wrap">
-                    <Image
-                        src={"/icons/icon_user.svg"}
-                        alt="User"
-                        width={40}
-                        height={40}
-                    />
-                    <p className="text-gray-700">{text}</p>
-                </div>
-            )}
-            {from == Creator.Bot && (
-                <div className="bg-gray-100 p-4 rounded-lg flex gap-4 items-center whitespace-pre-wrap">
-                    <Image
-                        src={"/icons/icon_bot.svg"}
-                        alt="Bot"
-                        width={40}
-                        height={40}
-                    />
-                    <p className="text-gray-700">{text}</p>
-                </div>
-            )}
-        </>
-    )
 }
 
 export const DiagnosisTemplae = () => {
