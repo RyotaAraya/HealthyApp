@@ -22,7 +22,7 @@ interface MessageProps {
 
 export const DiagnosisTemplae = () => {
     const USER_DATA = INIT_USER_DATA
-    const InitialInput = `健康アドバイスをお願いします。\n年齢: ${USER_DATA.age}才\n性別: ${USER_DATA.sex}\n身長: ${USER_DATA.height}\n体重: ${USER_DATA.weight}\n運動頻度: ${USER_DATA.exercise}\n喫煙頻度: ${USER_DATA.smoking}\n飲酒頻度: ${USER_DATA.drinking}`
+    const InitialInput = `健康アドバイスをお願いします。\n年齢: ${USER_DATA.age}才\n性別: ${USER_DATA.sex}\n身長: ${USER_DATA.height}cm\n体重: ${USER_DATA.weight}kg\n運動頻度: ${USER_DATA.exercise}\n喫煙頻度: ${USER_DATA.smoking}\n飲酒頻度: ${USER_DATA.drinking}`
     //chat上限
     const ChatMax = 4
 
