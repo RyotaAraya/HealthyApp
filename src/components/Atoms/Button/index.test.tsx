@@ -1,6 +1,4 @@
-import "@testing-library/jest-dom"
-
-import { fireEvent, render, screen } from "@testing-library/react"
+import { fireEvent, render } from "@testing-library/react"
 
 import Button from "@/components/Atoms/Button"
 
