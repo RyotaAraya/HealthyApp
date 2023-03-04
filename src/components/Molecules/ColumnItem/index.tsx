@@ -16,7 +16,13 @@ export const ColumnItem: FC<Omit<Column, "id" | "content">> = ({
 
     return (
         <button className={styles.container}>
-            <Image src={image.url} width={234} height={144} alt="column" />
+            <Image
+                className={styles.img}
+                src={image.url}
+                width={234}
+                height={144}
+                alt="column"
+            />
             <div className={styles.date}>
                 <span>{date}</span>
                 <span>{time}</span>

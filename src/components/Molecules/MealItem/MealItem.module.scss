@@ -5,7 +5,8 @@
     @include tab {
         width: 48%;
     }
-    img {
+    .img {
+        object-fit: cover;
         @include tab {
             width: 100%;
         }

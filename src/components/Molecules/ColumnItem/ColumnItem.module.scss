@@ -13,8 +13,11 @@
     @include sp {
         width: 48%;
     }
-    img {
-        width: 100%;
+    .img {
+        object-fit: cover;
+        @include tab {
+            width: 100%;
+        }
     }
 
     .date {

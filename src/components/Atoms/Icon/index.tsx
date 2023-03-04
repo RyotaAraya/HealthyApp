@@ -14,6 +14,9 @@ export const Icon = ({ url, width = 32, height = 32, alt = "logo" }: Props) => {
             width={width}
             height={height}
             priority={true}
+            onError={(e) => {
+                e.currentTarget.src = "images/no-image.png"
+            }}
         />
     )
 }

@@ -15,7 +15,13 @@ export const MealItem: FC<Omit<Meal, "id" | "createdAt">> = ({
 
     return (
         <button className={styles.container}>
-            <Image src={image.url} width={234} height={234} alt="Meal" />
+            <Image
+                className={styles.img}
+                src={image.url}
+                width={234}
+                height={234}
+                alt="Meal"
+            />
             <div>
                 <span>{dayConvert()}</span>
             </div>
