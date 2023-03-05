@@ -1,6 +1,7 @@
 import Head from "next/head"
 
 import RecordTemplate from "@/components/Templates/RecordTemplate"
+import { AuthGuard } from "@/features/auth"
 
 export default function Record() {
     return (
@@ -9,7 +10,9 @@ export default function Record() {
                 <title>Record</title>
             </Head>
             <main>
-                <RecordTemplate />
+                <AuthGuard>
+                    <RecordTemplate />
+                </AuthGuard>
             </main>
         </>
     )

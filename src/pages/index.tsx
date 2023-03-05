@@ -1,6 +1,7 @@
 import Head from "next/head"
 
 import MyPageTemplate from "@/components/Templates/MyPageTemplate"
+import { AuthGuard } from "@/features/auth"
 import { client } from "@/libs/client"
 
 export default function Home({ mealList }: any) {
@@ -10,7 +11,9 @@ export default function Home({ mealList }: any) {
                 <title>Top</title>
             </Head>
             <main>
-                <MyPageTemplate mealList={mealList} />
+                <AuthGuard>
+                    <MyPageTemplate mealList={mealList} />
+                </AuthGuard>
             </main>
         </>
     )
