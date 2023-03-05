@@ -1,22 +1,25 @@
 import BodyRecord from "@/components/Organisms/BodyRecord"
-import { DiaryList } from "@/components/Organisms/DiaryList"
 import MyDiary from "@/components/Organisms/MyDiary"
 import MyExercise from "@/components/Organisms/MyExercise"
 import TransitionMenu from "@/components/Organisms/TransitionMenu"
 import { useRecordTemplate } from "@/components/Templates/RecordTemplate/useRecordTemplate"
 
-type Props = {
-    diaryList: any
-}
-const RecordTemplate = ({ diaryList }: Props) => {
+const RecordTemplate = () => {
     const [
-        { originDiaryList, displayCount, ContainerRef },
-        { handleShowMore, handleSmoothScroll },
-    ] = useRecordTemplate({
-        diaryList,
-    })
+        {
+            loading,
+            error,
+            originDiaryList,
+            displayCount,
+            ContainerRef,
+            newDiaryContent,
+        },
+        { handleShowMore, handleSmoothScroll, handleAddSubmit, handleSetValue },
+    ] = useRecordTemplate()
     //Smooth Scroll用
     const [BodyRecordRef, MyExerciseRef, MyDiaryRef] = ContainerRef
+
+    if (error) throw new Error("Diary取得エラー")
     return (
         <>
             <TransitionMenu
@@ -29,9 +32,13 @@ const RecordTemplate = ({ diaryList }: Props) => {
             <div ref={MyExerciseRef}>
                 <MyExercise />
             </div>
-            <DiaryList />
             <div ref={MyDiaryRef}>
                 <MyDiary
+                    loading={loading}
+                    error={error}
+                    newDiaryContent={newDiaryContent}
+                    handleAddSubmit={handleAddSubmit}
+                    handleSetValue={handleSetValue}
                     originDiaryList={originDiaryList}
                     displayCount={displayCount}
                     handleShowMore={handleShowMore}

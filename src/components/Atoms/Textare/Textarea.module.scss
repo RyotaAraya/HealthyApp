@@ -1,0 +1,9 @@
+@import "../../../styles/mixin";
+
+.container {
+    padding: 10px;
+    line-height: 1.5;
+    height: 10em;
+    box-shadow: inner 0 0 4px rgba(0, 0, 0, 0.2);
+    width: 100%;
+}
