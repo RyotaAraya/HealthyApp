@@ -77,3 +77,6 @@ export const DIARY_VALIDATION_RULES = {
     MAX_LENGTH: 50,
     MIN_LENGTH: 5,
 }
+
+// Columnなどの最小表示数
+export const MIN_CONTENTS = 8
