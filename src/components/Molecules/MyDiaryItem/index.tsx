@@ -1,15 +1,17 @@
 import type { FC } from "react"
 
 import styles from "@/components/Molecules/MyDiaryItem/MyDiaryItem.module.scss"
-import type { Diary } from "@/types"
+import type { Diary } from "@/generated/request"
 import { FormatDate } from "@/utils"
 
-export const MyDiaryItem: FC<Omit<Diary, "id">> = ({ content, createdAt }) => {
-    //TODO:ベタ書き、取得したデータをもとに表示する
+type OmitDiary = Omit<Diary, "id" | "user" | "userId" | "updatedAt">
+
+export const MyDiaryItem: FC<OmitDiary> = ({ content, createdAt }) => {
+    const newDate = new Date(Number(createdAt))
 
     //データ整形を行い表示する
-    const date = FormatDate(new Date(createdAt), "yyyy.MM.dd")
-    const time = FormatDate(new Date(createdAt), "HH:mm")
+    const date = FormatDate(new Date(newDate), "yyyy.MM.dd")
+    const time = FormatDate(new Date(newDate), "HH:mm")
 
     return (
         <div className={styles.container}>

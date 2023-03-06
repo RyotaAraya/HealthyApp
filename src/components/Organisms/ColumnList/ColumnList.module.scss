@@ -5,15 +5,21 @@
     flex-direction: column;
     width: 960px;
     margin: 56px auto 320px auto;
+
     @include tab {
-        margin: 40px 0 0 0;
         width: 100%;
+        justify-content: center;
+        margin-bottom: 40px;
     }
 
     .container {
         display: flex;
-        justify-content: space-around;
         flex-wrap: wrap;
         gap: 8px;
+        justify-content: flex-start;
+        @include tab {
+            justify-content: space-around;
+            text-align: center;
+        }
     }
 }

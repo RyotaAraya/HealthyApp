@@ -79,4 +79,5 @@ export type ColumnFilter = {
 export type DrawerMenu = {
     name: string
     link: string
+    isLogin: boolean
 }

@@ -1,29 +1,19 @@
 import Head from "next/head"
 
 import RecordTemplate from "@/components/Templates/RecordTemplate"
-import { client } from "@/libs/client"
+import { AuthGuard } from "@/features/auth"
 
-export default function Record({ diaryList }: any) {
+export default function Record() {
     return (
         <>
             <Head>
                 <title>Record</title>
             </Head>
             <main>
-                <RecordTemplate diaryList={diaryList} />
+                <AuthGuard>
+                    <RecordTemplate />
+                </AuthGuard>
             </main>
         </>
     )
-}
-
-export const getStaticProps = async () => {
-    const { contents } = await client.get({
-        endpoint: "diaries",
-    })
-
-    return {
-        props: {
-            diaryList: contents,
-        },
-    }
 }

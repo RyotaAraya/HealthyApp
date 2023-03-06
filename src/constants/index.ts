@@ -49,21 +49,34 @@ export const DRAWER_MENU: DrawerMenu[] = [
     {
         name: "記録",
         link: "/record",
+        isLogin: true,
     },
     {
         name: "体重グラフ",
         link: "#",
+        isLogin: true,
     },
     {
         name: "目標",
         link: "#",
+        isLogin: true,
     },
     {
         name: "コラム一覧",
         link: "/column",
+        isLogin: false,
     },
     {
         name: "設定",
         link: "#",
+        isLogin: true,
     },
 ]
+
+export const DIARY_VALIDATION_RULES = {
+    MAX_LENGTH: 50,
+    MIN_LENGTH: 5,
+}
+
+// Columnなどの最小表示数
+export const MIN_CONTENTS = 8

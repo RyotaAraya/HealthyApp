@@ -3,7 +3,7 @@
 .wrap {
     display: flex;
     flex-direction: column;
-    margin: 56px auto 0;
+    margin: 56px auto 0 auto;
     width: 960px;
     @include tab {
         width: 100%;
@@ -15,7 +15,6 @@
         font-size: 22px;
         font-weight: 400;
         text-align: left;
-        margin-bottom: 10px;
         @include tab {
             font-size: 16px;
             margin-bottom: 4px;
@@ -23,8 +22,18 @@
     }
 
     .container {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 12px;
+        .list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: flex-start;
+            padding: 4px;
+        }
+    }
+    .error {
+        color: red;
+    }
+    .loading {
+        color: blue;
     }
 }
