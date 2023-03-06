@@ -1,6 +1,7 @@
 import type { FormEventHandler } from "react"
 import { useEffect, useRef, useState } from "react"
 
+import { DIARY_VALIDATION_RULES } from "@/constants"
 import type { DiariesQuery } from "@/generated/request"
 import {
     useAddDiaryMutation,
@@ -20,12 +21,35 @@ export const useRecordTemplate = () => {
         []
     )
     const [displayCount, setDisplayCount] = useState(8)
+
+    const [errors, setErrors] = useState({
+        error: error,
+        maxLength: "",
+        minLength: "",
+    })
+
+    //日記追加
     const [newDiaryContent, setNewDiaryContent] = useState("")
 
     const [addDiaryMutation] = useAddDiaryMutation()
 
     const handleAddSubmit: FormEventHandler<HTMLFormElement> = async (e) => {
         e.preventDefault()
+        console.log("new", newDiaryContent.length)
+        if (newDiaryContent.length === 0) return
+        if (newDiaryContent.length > DIARY_VALIDATION_RULES.MAX_LENGTH) {
+            setErrors((prevErrors) => ({
+                ...prevErrors,
+                maxLength: `日記は${DIARY_VALIDATION_RULES.MAX_LENGTH}文字以下で入力してください。`,
+            }))
+            return
+        } else if (newDiaryContent.length < DIARY_VALIDATION_RULES.MIN_LENGTH) {
+            setErrors((prevErrors) => ({
+                ...prevErrors,
+                minLength: `日記は${DIARY_VALIDATION_RULES.MIN_LENGTH}文字以上で入力してください。`,
+            }))
+            return
+        }
         const { data } = await addDiaryMutation({
             variables: { content: newDiaryContent },
         })
@@ -33,13 +57,35 @@ export const useRecordTemplate = () => {
         if (!addDiary) return
         setDiaryList([addDiary, ...originDiaryList])
         setNewDiaryContent("")
+        setErrors((prevErrors) => ({
+            ...prevErrors,
+            maxLength: "",
+            minLength: "",
+        }))
         await refetch()
     }
 
     const handleSetValue = (value: string) => {
         setNewDiaryContent(value)
-    }
 
+        if (value.length > DIARY_VALIDATION_RULES.MAX_LENGTH) {
+            setErrors((prevErrors) => ({
+                ...prevErrors,
+                maxLength: `日記は${DIARY_VALIDATION_RULES.MAX_LENGTH}文字以下で入力してください。`,
+            }))
+        } else if (value.length < DIARY_VALIDATION_RULES.MIN_LENGTH) {
+            setErrors((prevErrors) => ({
+                ...prevErrors,
+                minLength: `日記は${DIARY_VALIDATION_RULES.MIN_LENGTH}文字以上で入力してください。`,
+            }))
+        } else {
+            setErrors((prevErrors) => ({
+                ...prevErrors,
+                maxLength: "",
+                minLength: "",
+            }))
+        }
+    }
     //もっと見るボタン押下時 表示可能数を件増やす
     const handleShowMore = () => {
         setDisplayCount(displayCount + 8)
@@ -61,7 +107,7 @@ export const useRecordTemplate = () => {
 
     const states = {
         loading,
-        error,
+        errors,
         originDiaryList,
         displayCount,
         ContainerRef,

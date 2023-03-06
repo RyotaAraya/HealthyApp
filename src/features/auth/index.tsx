@@ -7,12 +7,12 @@ type Props = {
     children: ReactNode
 }
 export const AuthGuard: FC<Props> = ({ children }) => {
-    const { data: session } = useSession()
+    const { data: session, status } = useSession()
     const router = useRouter()
 
     useEffect(() => {
-        if (!session) router.push("/column")
-    }, [session, router])
+        if (status === "unauthenticated") router.push("/column")
+    }, [status, router])
 
     if (!session) return null
 

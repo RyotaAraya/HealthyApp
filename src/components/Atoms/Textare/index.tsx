@@ -8,7 +8,6 @@ type Props = {
     loading: boolean
     handleSetValue: (targetValue: string) => void
 }
-
 export const Textarea: FC<Props> = ({
     value,
     placeholder,

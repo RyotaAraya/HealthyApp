@@ -10,7 +10,7 @@ type OmitDiary = Omit<Diary, "user" | "userId" | "updatedAt">
 
 type Props = {
     loading: boolean
-    error: any
+    errors: Errors
     newDiaryContent: string
     handleAddSubmit: FormEventHandler<HTMLFormElement>
     handleSetValue: (value: string) => void
@@ -19,9 +19,15 @@ type Props = {
     handleShowMore: () => void
 }
 
+type Errors = {
+    error: any
+    maxLength: string
+    minLength: string
+}
+
 export const MyDiary = ({
     loading,
-    error,
+    errors,
     newDiaryContent,
     handleAddSubmit,
     handleSetValue,
@@ -30,7 +36,8 @@ export const MyDiary = ({
     handleShowMore,
 }: Props) => {
     const Diaries = () => {
-        if (error) return <h1 className={styles.error}>読み込みエラー</h1>
+        if (errors.error)
+            return <h1 className={styles.error}>読み込みエラー</h1>
         if (loading) return <h1 className={styles.loading}>Loading...</h1>
         return (
             <div className={styles.container}>
@@ -59,6 +66,7 @@ export const MyDiary = ({
             <h3 className={styles.title}>日記</h3>
             <DiaryAddForm
                 loading={loading}
+                errors={errors}
                 newDiaryContent={newDiaryContent}
                 handleAddSubmit={handleAddSubmit}
                 handleSetValue={handleSetValue}

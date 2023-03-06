@@ -8,7 +8,7 @@ const RecordTemplate = () => {
     const [
         {
             loading,
-            error,
+            errors,
             originDiaryList,
             displayCount,
             ContainerRef,
@@ -19,7 +19,7 @@ const RecordTemplate = () => {
     //Smooth Scroll用
     const [BodyRecordRef, MyExerciseRef, MyDiaryRef] = ContainerRef
 
-    if (error) throw new Error("Diary取得エラー")
+    if (errors.error) throw new Error("Diary取得エラー")
     return (
         <>
             <TransitionMenu
@@ -35,7 +35,7 @@ const RecordTemplate = () => {
             <div ref={MyDiaryRef}>
                 <MyDiary
                     loading={loading}
-                    error={error}
+                    errors={errors}
                     newDiaryContent={newDiaryContent}
                     handleAddSubmit={handleAddSubmit}
                     handleSetValue={handleSetValue}

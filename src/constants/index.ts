@@ -72,3 +72,8 @@ export const DRAWER_MENU: DrawerMenu[] = [
         isLogin: true,
     },
 ]
+
+export const DIARY_VALIDATION_RULES = {
+    MAX_LENGTH: 50,
+    MIN_LENGTH: 5,
+}

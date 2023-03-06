@@ -6,6 +6,16 @@
     flex-flow: column;
     width: 100%;
     margin-top: 40px;
+
+    &.error {
+        color: #c20c33;
+
+        textarea {
+            color: #630015;
+            border-color: #c20c33;
+            background-color: #ffd9e1;
+        }
+    }
     button {
         display: block;
         margin-top: 28px;
